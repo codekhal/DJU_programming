@@ -28,7 +28,7 @@ fiboByrecursion함수를 보면 재귀 알고리즘들이 항상 2번 호출되�
 
 와 같다. x축은 시간이며 y축은 데이터 량인데 이 경우 repetition한 함수가 월등히 높은 성능을 가진다는걸 볼 수 있다.
 
-
+![5forpolynomials_add](https://user-images.githubusercontent.com/16266103/30514094-ae678a96-9b49-11e7-87bd-95d487c1e533.PNG)
 
 그러나 위와같은 그래프의 경우 일정 구간동안 recursion이 repetition한 것 보다 성능이 뛰어난 경우가 있다는것을 확인할 수 있다.
 
