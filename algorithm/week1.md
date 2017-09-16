@@ -16,8 +16,7 @@ fiboByrecursion함수를 보면 재귀 알고리즘들이 항상 2번 호출되�
 
 피보나치.c의 출력결과는
 
-[![alt text](/7arOvEUbTMRHwLVn1)]
-(https://photos.app.goo.gl "Title")
+![alt text](https://photos.app.goo.gl/7arOvEUbTMRHwLVn1 "Title")
 이며 이를 그래프로 그려보면
 
 ![alt text](https://drive.google.com/open?id=0B4Q0BjjmlIe7NmNmbVYzUklfeWM "2")
