@@ -24,7 +24,7 @@ fiboByrecursion함수를 보면 재귀 알고리즘들이 항상 2번 호출되�
 
 와 같다. x축은 시간이며 y축은 데이터 량인데 이 경우 repetition한 함수가 월등히 높은 성능을 가진다는걸 볼 수 있다.
 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
 
 그러나 위와같은 그래프의 경우 일정 구간동안 recursion이 repetition한 것 보다 성능이 뛰어난 경우가 있다는것을 확인할 수 있다.
 
@@ -82,7 +82,7 @@ int main() {
 
 소스코드의 multiplyMatrix 함수의 경우 중첩반복문이 3개 들어가므로 n*n*n -> O(n^3)의 시간복잡도를 가진다.
 
-![alt text](https://drive.google.com/open?id=0B4Q0BjjmlIe7eE5mWTNKbWwyS00 "3")
+![1formatrix](https://user-images.githubusercontent.com/16266103/30514056-359c2676-9b49-11e7-94f3-efd64fbaf552.PNG)
 
 ## 3. 재귀.cpp
 
@@ -92,15 +92,15 @@ int main() {
 
 재귀.cpp 소스코드의 repetitiveSum함수를 보면 피보나치.c에서 살펴봤듯 반복함수이므로 O(n)의 시간복잡도를 가진다.
 
-![alt text](https://drive.google.com/file/d/0B4Q0BjjmlIe7Y1hUbDRDRmpwYUE/view?usp=sharing "4")
+![2forrecandrev_repetitivesum](https://user-images.githubusercontent.com/16266103/30514066-6290e784-9b49-11e7-8bd4-c58787794bd7.PNG)
 
 ?소스코드의 recursiveSum함수는 bestcase든 worstcase든 꼭 1번 조건문을 실행하고 그 조건문 안에서 else의 경우 재귀를 하게 되므로 피보나치.c에서 알아본 것 처럼 항상 2번 호출되므로 O(2^n)의 시간복잡도를 가진다.
 
-![alt text](https://drive.google.com/open?id=0B4Q0BjjmlIe7VWJ2WlhjRmlYdlk "5")
+![3forrecandrev_recursivesum](https://user-images.githubusercontent.com/16266103/30514069-70399ec6-9b49-11e7-90b9-027d940d63f1.PNG)
 
 recursiveFastSum함수를 살펴보면 재귀함수이지만 recursiveFastSum의 n의값을 2로 나누므로 O(밑이 2인 로그의 n)의 시간복잡도를 가진다.
 
-![alt text](https://drive.google.com/open?id=0B4Q0BjjmlIe7Xy1SNlFDOGVSVGM "6")
+![4forrecandrev_recursivefastsum](https://user-images.githubusercontent.com/16266103/30514083-98db6b48-9b49-11e7-90a0-d415329676fd.PNG)
 
 
 ## 4. 다항식덧셈.c
@@ -111,4 +111,4 @@ recursiveFastSum함수를 살펴보면 재귀함수이지만 recursiveFastSum의
 
 ?다항식덧셈.c 소스코드의 addPolynomial함수를 살펴보면 변수의 선언과 초기화는 constant한 값이므로 제외하고 while문을 살펴보면 루프문은 O(log n)의 시간복잡도를 가지고
 
-![alt text](https://drive.google.com/open?id=0B4Q0BjjmlIe7Y3BYQ0h2ZXB2Z1E "7")
+![5forpolynomials_add](https://user-images.githubusercontent.com/16266103/30514094-ae678a96-9b49-11e7-87bd-95d487c1e533.PNG)
