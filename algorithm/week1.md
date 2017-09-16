@@ -12,13 +12,15 @@
 반복 알고리즘과 재귀 알고리즘의 성능차이를 연산량을 늘려가면서 걸린 시간의 측정으로 판단할 수 있다.
 ```
 
+### 실행결과
+
+![1_recursion_repetition_result](https://user-images.githubusercontent.com/16266103/30514036-f648d1cc-9b48-11e7-9137-795cc66573ff.png)
+
+### 소스분석
+
 fiboByrepetition함수를 보면 변수에 자료형을 지정하고 값을 대입하는일 1번 worst case로써 조건과 맞는지 체크하고 맞으면 조건 안의 일을 하는 if문을 1번하고 이를 통과하면 for문을 돌리게 되는데 for문 자체는 O(n)로 돌리 수 있으나 repetition하지 않은 앞에 2번의 일은 constant한 값이므로 결국 O(n)의 시간복잡도를 가진다.
 
 fiboByrecursion함수를 보면 재귀 알고리즘들이 항상 2번 호출되기 때문에 O(2^n)의 시간복잡도를 가진다.
-
-피보나치.c의 출력결과는
-
-![1_recursion_repetition_result](https://user-images.githubusercontent.com/16266103/30514036-f648d1cc-9b48-11e7-9137-795cc66573ff.png)
 
 이며 이를 그래프로 그려보면
 
@@ -80,17 +82,26 @@ int main() {
 
 ```
 
+### 실행결과
+
+![1formatrix](https://user-images.githubusercontent.com/16266103/30514056-359c2676-9b49-11e7-94f3-efd64fbaf552.PNG)
+
+### 소스분석
+
 행렬덧셈.cpp 소스코드의 addMatrix함수를 살펴보면 중첩 반복문이 2개 들어가므로 n*n -> O(n^2)의 시간복잡도를 가진다.
 
 소스코드의 multiplyMatrix 함수의 경우 중첩반복문이 3개 들어가므로 n*n*n -> O(n^3)의 시간복잡도를 가진다.
 
-![1formatrix](https://user-images.githubusercontent.com/16266103/30514056-359c2676-9b49-11e7-94f3-efd64fbaf552.PNG)
 
 ## 3. 재귀.cpp
 
 ```c
 
 ```
+
+### 실행결과
+
+### 소스분석
 
 재귀.cpp 소스코드의 repetitiveSum함수를 보면 피보나치.c에서 살펴봤듯 반복함수이므로 O(n)의 시간복잡도를 가진다.
 
@@ -111,6 +122,10 @@ recursiveFastSum함수를 살펴보면 재귀함수이지만 recursiveFastSum의
 
 ```
 
-?다항식덧셈.c 소스코드의 addPolynomial함수를 살펴보면 변수의 선언과 초기화는 constant한 값이므로 제외하고 while문을 살펴보면 루프문은 O(log n)의 시간복잡도를 가지고
+### 실행결과
 
 ![5forpolynomials_add](https://user-images.githubusercontent.com/16266103/30514094-ae678a96-9b49-11e7-87bd-95d487c1e533.PNG)
+
+### 소스분석
+?다항식덧셈.c 소스코드의 addPolynomial함수를 살펴보면 변수의 선언과 초기화는 constant한 값이므로 제외하고 while문을 살펴보면 루프문은 O(log n)의 시간복잡도를 가지고
+
