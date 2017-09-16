@@ -16,11 +16,11 @@ fiboByrecursion함수를 보면 재귀 알고리즘들이 항상 2번 호출되�
 
 피보나치.c의 출력결과는
 
-![alt text](https://drive.google.com/open?id=0B4Q0BjjmlIe7ZlZXYTFHdEdiVGc)
+![alt text](https://drive.google.com/open?id=0B4Q0BjjmlIe7ZlZXYTFHdEdiVGc "1")
 
 이며 이를 그래프로 그려보면
 
-![alt text](https://drive.google.com/open?id=0B4Q0BjjmlIe7NmNmbVYzUklfeWM)
+![alt text](https://drive.google.com/open?id=0B4Q0BjjmlIe7NmNmbVYzUklfeWM "2")
 
 와 같다. x축은 시간이며 y축은 데이터 량인데 이 경우 repetition한 함수가 월등히 높은 성능을 가진다는걸 볼 수 있다.
 
@@ -82,7 +82,7 @@ int main() {
 
 소스코드의 multiplyMatrix 함수의 경우 중첩반복문이 3개 들어가므로 n*n*n -> O(n^3)의 시간복잡도를 가진다.
 
-![alt text](https://drive.google.com/open?id=0B4Q0BjjmlIe7eE5mWTNKbWwyS00)
+![alt text](https://drive.google.com/open?id=0B4Q0BjjmlIe7eE5mWTNKbWwyS00 "3")
 
 ## 3. 재귀.cpp
 
@@ -92,15 +92,15 @@ int main() {
 
 재귀.cpp 소스코드의 repetitiveSum함수를 보면 피보나치.c에서 살펴봤듯 반복함수이므로 O(n)의 시간복잡도를 가진다.
 
-![alt text](https://drive.google.com/open?id=0B4Q0BjjmlIe7Y1hUbDRDRmpwYUE)
+![alt text](https://drive.google.com/open?id=0B4Q0BjjmlIe7Y1hUbDRDRmpwYUE "4")
 
 ?소스코드의 recursiveSum함수는 bestcase든 worstcase든 꼭 1번 조건문을 실행하고 그 조건문 안에서 else의 경우 재귀를 하게 되므로 피보나치.c에서 알아본 것 처럼 항상 2번 호출되므로 O(2^n)의 시간복잡도를 가진다.
 
-![alt text](https://drive.google.com/open?id=0B4Q0BjjmlIe7VWJ2WlhjRmlYdlk)
+![alt text](https://drive.google.com/open?id=0B4Q0BjjmlIe7VWJ2WlhjRmlYdlk "5")
 
 recursiveFastSum함수를 살펴보면 재귀함수이지만 recursiveFastSum의 n의값을 2로 나누므로 O(밑이 2인 로그의 n)의 시간복잡도를 가진다.
 
-![alt text](https://drive.google.com/open?id=0B4Q0BjjmlIe7Xy1SNlFDOGVSVGM)
+![alt text](https://drive.google.com/open?id=0B4Q0BjjmlIe7Xy1SNlFDOGVSVGM "6")
 
 
 ## 4. 다항식덧셈.c
@@ -111,4 +111,4 @@ recursiveFastSum함수를 살펴보면 재귀함수이지만 recursiveFastSum의
 
 ?다항식덧셈.c 소스코드의 addPolynomial함수를 살펴보면 변수의 선언과 초기화는 constant한 값이므로 제외하고 while문을 살펴보면 루프문은 O(log n)의 시간복잡도를 가지고
 
-![alt text](https://drive.google.com/open?id=0B4Q0BjjmlIe7Y3BYQ0h2ZXB2Z1E)
+![alt text](https://drive.google.com/open?id=0B4Q0BjjmlIe7Y3BYQ0h2ZXB2Z1E "7")
