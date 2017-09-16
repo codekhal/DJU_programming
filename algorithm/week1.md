@@ -101,19 +101,28 @@ int main() {
 
 ### 실행결과
 
+#### repetitiveSum
+
+![2forrecandrev_repetitivesum](https://user-images.githubusercontent.com/16266103/30514066-6290e784-9b49-11e7-8bd4-c58787794bd7.PNG)
+
+#### recursiveSum
+
+![3forrecandrev_recursivesum](https://user-images.githubusercontent.com/16266103/30514069-70399ec6-9b49-11e7-90b9-027d940d63f1.PNG)
+
+#### recursiveFastSum
+
+![4forrecandrev_recursivefastsum](https://user-images.githubusercontent.com/16266103/30514083-98db6b48-9b49-11e7-90a0-d415329676fd.PNG)
+
 ### 소스분석
 
 재귀.cpp 소스코드의 repetitiveSum함수를 보면 피보나치.c에서 살펴봤듯 반복함수이므로 O(n)의 시간복잡도를 가진다.
 
-![2forrecandrev_repetitivesum](https://user-images.githubusercontent.com/16266103/30514066-6290e784-9b49-11e7-8bd4-c58787794bd7.PNG)
 
 ?소스코드의 recursiveSum함수는 bestcase든 worstcase든 꼭 1번 조건문을 실행하고 그 조건문 안에서 else의 경우 재귀를 하게 되므로 피보나치.c에서 알아본 것 처럼 항상 2번 호출되므로 O(2^n)의 시간복잡도를 가진다.
 
-![3forrecandrev_recursivesum](https://user-images.githubusercontent.com/16266103/30514069-70399ec6-9b49-11e7-90b9-027d940d63f1.PNG)
 
 recursiveFastSum함수를 살펴보면 재귀함수이지만 recursiveFastSum의 n의값을 2로 나누므로 O(밑이 2인 로그의 n)의 시간복잡도를 가진다.
 
-![4forrecandrev_recursivefastsum](https://user-images.githubusercontent.com/16266103/30514083-98db6b48-9b49-11e7-90a0-d415329676fd.PNG)
 
 
 ## 4. 다항식덧셈.c
