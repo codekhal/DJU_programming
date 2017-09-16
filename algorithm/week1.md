@@ -18,10 +18,9 @@ fiboByrecursion함수를 보면 재귀 알고리즘들이 항상 2번 호출되�
 
 ![1_recursion_repetition_result](https://user-images.githubusercontent.com/16266103/30514036-f648d1cc-9b48-11e7-9137-795cc66573ff.png)
 
-
 이며 이를 그래프로 그려보면
 
-![alt text](https://drive.google.com/open?id=0B4Q0BjjmlIe7NmNmbVYzUklfeWM "2")
+<img width="477" alt="1_recursion_repetition" src="https://user-images.githubusercontent.com/16266103/30514050-15d19c04-9b49-11e7-8709-e45eb79b86d2.png">
 
 와 같다. x축은 시간이며 y축은 데이터 량인데 이 경우 repetition한 함수가 월등히 높은 성능을 가진다는걸 볼 수 있다.
 
