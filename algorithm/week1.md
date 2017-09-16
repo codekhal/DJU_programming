@@ -101,15 +101,15 @@ int main() {
 
 ### 실행결과
 
-#### <repetitiveSum>
+#### >> repetitiveSum
 
 ![2forrecandrev_repetitivesum](https://user-images.githubusercontent.com/16266103/30514066-6290e784-9b49-11e7-8bd4-c58787794bd7.PNG)
 
-#### <recursiveSum>
+#### >> recursiveSum
 
 ![3forrecandrev_recursivesum](https://user-images.githubusercontent.com/16266103/30514069-70399ec6-9b49-11e7-90b9-027d940d63f1.PNG)
 
-#### <recursiveFastSum>
+#### >> recursiveFastSum
 
 ![4forrecandrev_recursivefastsum](https://user-images.githubusercontent.com/16266103/30514083-98db6b48-9b49-11e7-90a0-d415329676fd.PNG)
 
