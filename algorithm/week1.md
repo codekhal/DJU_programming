@@ -1,8 +1,5 @@
 # Algorithm 수업 WEEK1 과제
 
-그래프의 x축은 걸린시간 y축은 처한 데이터 량
-그래프로 보아 repetition이 recursion
-
 ## 1. 피보나치.c
 
 ```c
