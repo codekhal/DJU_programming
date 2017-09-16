@@ -16,11 +16,9 @@ fiboByrecursion함수를 보면 재귀 알고리즘들이 항상 2번 호출되�
 
 피보나치.c의 출력결과는
 
-<a href="url"><img src="http://blog.naver.com/PostView.nhn?blogId=chandong83&logNo=220812226888&parentCategoryNo=&categoryNo=30&viewDate=&isShowPopularPosts=false&from=postView#"></a>
+![1_recursion_repetition_result](https://user-images.githubusercontent.com/16266103/30514036-f648d1cc-9b48-11e7-9137-795cc66573ff.png)
 
-![sss](https://lh3.googleusercontent.com/hVY9D18-snNQLBnmmRbpAIAeO4iPfuZIEMkjwIf1ZtEJB1Z7jbCWOh-fkk5bgMQLCvHLWhXh8Y3naCoIhFS0GIVLHV2NPFqTkjRfUD-jUIzgzqG9b5xo9oFMOiEhzthmJVoC2j9x_81Xw8Ja4mWVPXf7QiiJ0eiEQVKHIlpf8PXOm2XUyY0pH856E8vrMZjkn70cSRvjbffSZKXPdzvOze6rna_0iuqq_S6L5M4Bf3ybV5LmJzh918GGdVKRGF-UPfuIYpqsptFwCQ450ipUv7AB5DYzZtNjPfgo_rbCZ72loN5Sn4W9Yk5XUEg0ZxsUcxyf7SazR5p1keYhBHPyfS_rrfPhqYHoft3gQdgtEkuPzD2did33zC9c6mncF4_WJialAxhgPIO_8k7qjTDTZfNmW7tLxo5YrD1k2K1pHjJIg4XFYgRk1_uDoWNpeOqJy0IwEOOMOrCUX1lw_KTD0W3-pTkqL1g5xaqCWyrwGUVa0RQPQzHzFmm_1gNL40criq9u9Gp-a9UW2HnJ8Z5o2fErf_LUODyxiCFuCD-PUCy93wtCFUzdOzNX9ehmJ2GAbjH4TkjmjvV05imRtlOZnHhA_YuSgWqFTFSM9FEBag=w489-h1040-no)
 
-![alt text](http://blog.naver.com/PostView.nhn?blogId=chandong83&logNo=220812226888&parentCategoryNo=&categoryNo=30&viewDate=&isShowPopularPosts=false&from=postView#)
 이며 이를 그래프로 그려보면
 
 ![alt text](https://drive.google.com/open?id=0B4Q0BjjmlIe7NmNmbVYzUklfeWM "2")
