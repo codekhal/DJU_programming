@@ -92,7 +92,7 @@ int main() {
 
 재귀.cpp 소스코드의 repetitiveSum함수를 보면 피보나치.c에서 살펴봤듯 반복함수이므로 O(n)의 시간복잡도를 가진다.
 
-![alt text](https://drive.google.com/a/knou.ac.kr/file/d/0B4Q0BjjmlIe7Y1hUbDRDRmpwYUE/view?usp=sharing)
+![alt text](https://drive.google.com/a/knou.ac.kr/file/d/0B4Q0BjjmlIe7Y1hUbDRDRmpwYUE/view?usp=sharing "4")
 
 ?소스코드의 recursiveSum함수는 bestcase든 worstcase든 꼭 1번 조건문을 실행하고 그 조건문 안에서 else의 경우 재귀를 하게 되므로 피보나치.c에서 알아본 것 처럼 항상 2번 호출되므로 O(2^n)의 시간복잡도를 가진다.
 
