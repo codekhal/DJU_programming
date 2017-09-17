@@ -1,11 +1,74 @@
-# Algorithm 수업 WEEK1 과제
+# Algorithm 수업 1주차 과제
 
 ## 1. 피보나치.c
 
 ```c
+//***Fibonacci Series***
+//------------------------
+// Method 1: Repetition Algorithm Usage
+// Method 2: Recursion Algorithm Usage
+// -----------------------
 
+#include <stdio.h>
+#include <conio.h>
+#include <time.h>
 
+int fiboByRepetition(int n) 
+{
+	int fn_1 = 0, fn_2 = 1, fn, i;
+	if (n <= 1) return 1;
+	for (i = 2; i <= n; i++)
+	{
+		fn = fn_1 + fn_2;
+		fn_1 = fn_2;
+		fn_2 = fn;
+	}
+	return fn;
+}
 
+int fiboByRecursion(int n) {
+	if (n == 0) return 0;
+	if (n == 1) return 1;
+	return fiboByRecursion(n - 1) + fiboByRecursion(n - 2);
+}
+
+int main() {
+	int fibo;
+	clock_t start, stop;
+	double duration, total;
+
+	printf("enter the no. of terms here: ");
+	scanf("%d", &n1);
+
+	printf("the fibonacci series(repetition): \n");
+	start = clock();    fibo = fiboByRepetition(n1); stop = clock();
+	total = ((double)(stop - start)) / CLK_TCK;
+	printf("%d(%3d, %f)\n", fibo, n1, total);
+	getchar();
+
+	printf("the fibonacci series(recursion): \n");
+	start = clock();   fibo = fiboByRecursion(n1); stop = clock();
+	total = ((double)(stop - start)) / CLK_TCK;
+	printf("%d(%3d, %f)\n", fibo, n1, total);
+	getchar();
+
+	printf("enter the second no. of terms here: ");
+	scanf("%d", &n2);
+
+	printf("the fibonacci series(repetition): \n");
+	start = clock();    fibo = fiboByRepetition(n2); stop = clock();
+	total = ((double)(stop - start)) / CLK_TCK;
+	printf("%d(%3d, %f)\n", fibo, n2, total);
+	getchar();
+
+	printf("the fibonacci series(recursion): \n");
+	start = clock();   fibo = fiboByRecursion(n2); stop = clock();
+	total = ((double)(stop - start)) / CLK_TCK;
+	printf("%d(%3d, %f)\n", fibo, n2, total);
+	getchar();
+
+	return 0;
+}
 ```
 
 ```
@@ -96,7 +159,58 @@ int main() {
 ## 3. 재귀.cpp
 
 ```c
+#include <iostream>
+#include <vector>
+using namespace std;
 
+int repetitiveSum(int n) {
+	int ret = 0;
+	static int count = 0;
+	for (int i = 1; i < (n + 1); i++) {
+		cout << ++count << "\t";
+		ret += i;
+	}
+
+	cout << endl;
+	return ret;
+}
+
+int recursiveSum(int n) {
+	static int count = 0;
+	if (n == 1) {
+		cout << ++count << "\n";
+		return 1; //base case for all
+	}
+	else {
+		cout << ++count << "\t";
+		return (n + recursiveSum(n - 1));
+	}
+}
+
+int recursiveFastSum(int n) {
+	static int count = 0;
+	if (n == 1) { cout << ++count << "\t"; return 1; }
+	if (n % 2 == 1) { cout << ++count << "\t"; return recursiveFastSum(n - 1) + n; }
+	cout << ++count << "\t"; return 2 * recursiveFastSum(n / 2) + (n / 2) * (n / 2);
+}
+
+int main() {
+	int num = 1024, summation = 0;
+
+	summation = repetitiveSum(num);
+	cout << "repetitive sum = " << summation << endl;
+	getchar();
+
+	summation = recursiveSum(num);
+	cout << "recursive sum = " << summation << endl;
+	getchar();
+
+	summation = recursiveFastSum(num);
+	cout << "recursive fast sum = " << summation << endl;
+	getchar();
+
+	return 0;
+}
 ```
 
 ### 실행결과
@@ -126,6 +240,57 @@ recursiveFastSum함수를 살펴보면 재귀함수이지만 recursiveFastSum의
 ## 4. 다항식덧셈.c
 
 ```c
+#include <stdlib.h>
+#include <stdio.h>
+#define MAX(a, b) ((a > b) ? a : b)
+#define MAX_DEGREE 50
+//-------------------------------
+
+typedef struct { int degree; float coef[MAX_DEGREE]; } polynomial;
+polynomial addPolynomial(polynomial, polynomial);
+void printPolynomial(polynomial);
+
+int main() {
+	polynomial A = { 3,{ 4, 3, 5, 0 } }, B = { 4,{ 3, 1, 0, 2, 1 } }, C;
+	C = addPolynomial(A, B);
+
+	printf("\n A(x) = \t"); printPolynomial(A);
+	printf("\n B(x) = \t"); printPolynomial(B);
+	printf("\n C(x) = \t"); printPolynomial(C);
+	getchar();
+	return 0;
+}
+
+polynomial addPolynomial(polynomial A, polynomial B) {
+	polynomial C;
+	int A_i = 0, B_i = 0, C_i = 0;
+	int A_deg = A.degree, B_deg = B.degree;
+	C.degree = MAX(A.degree, B.degree);
+	while (A_i <= A.degree && B_i <= B.degree) {
+		if (A_deg > B_deg) {
+			C.coef[C_i++] = A.coef[A_i++];
+			A_deg--;
+		}
+		else if (A_deg == B_deg) {
+			C.coef[C_i++] = A.coef[A_i++] + B.coef[B_i++];
+			A_deg--, B_deg--;
+		}
+		else {
+			C.coef[C_i++] = B.coef[B_i++];
+			B_deg--;
+		}
+	}
+	return C;
+}
+
+void printPolynomial(polynomial P) {
+	int i, degree = P.degree;
+	for (i = 0; i <= P.degree; i++) {
+		printf("%3.0fx^%2d", P.coef[i], degree--);
+		if (i < P.degree) printf(" + ");
+	}
+	printf("\n");
+}
 
 ```
 
