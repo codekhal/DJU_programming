@@ -30,48 +30,33 @@ int fiboByRepetition(int n)
 		fn_2 = fn;
 	}
 	return fn;
-}
+}// 
 
 int fiboByRecursion(int n) {
 	if (n == 0) return 0;
 	if (n == 1) return 1;
 	return fiboByRecursion(n - 1) + fiboByRecursion(n - 2);
-}
+}// 재귀함수 
 
 int main() {
 	int fibo;
-	clock_t start, stop;
+	clock_t start, stop;//clock_t는 time.h에 포함되어 있는 데이터형 중 하나
 	double duration, total;
 
 	printf("enter the no. of terms here: ");
-	scanf("%d", &n1);
+	scanf("%d", &n1);// 처리 할 데이터 량 입력
 
 	printf("the fibonacci series(repetition): \n");
 	start = clock();    fibo = fiboByRepetition(n1); stop = clock();
 	total = ((double)(stop - start)) / CLK_TCK;
 	printf("%d(%3d, %f)\n", fibo, n1, total);
-	getchar();
+	getchar();// 데이터량에 따른 반복의 걸린 시간
 
 	printf("the fibonacci series(recursion): \n");
 	start = clock();   fibo = fiboByRecursion(n1); stop = clock();
 	total = ((double)(stop - start)) / CLK_TCK;
 	printf("%d(%3d, %f)\n", fibo, n1, total);
-	getchar();
-
-	printf("enter the second no. of terms here: ");
-	scanf("%d", &n2);
-
-	printf("the fibonacci series(repetition): \n");
-	start = clock();    fibo = fiboByRepetition(n2); stop = clock();
-	total = ((double)(stop - start)) / CLK_TCK;
-	printf("%d(%3d, %f)\n", fibo, n2, total);
-	getchar();
-
-	printf("the fibonacci series(recursion): \n");
-	start = clock();   fibo = fiboByRecursion(n2); stop = clock();
-	total = ((double)(stop - start)) / CLK_TCK;
-	printf("%d(%3d, %f)\n", fibo, n2, total);
-	getchar();
+	getchar();// 데이터량에 따른 재귀의 건린 시간
 
 	return 0;
 }
@@ -111,7 +96,7 @@ void addMatrix(int a[][MAX_SIZE], int b[][MAX_SIZE], int c[][MAX_SIZE], int rowN
   for (i = 0; i < rowN; i++)
     for ( i = 0; i < colN; i++)
       c[i][j] = a[i][j] + b[i][j];
-}
+}// 2차행렬 <- 중첩반복문 2개가 들어가므로 n * n = O(n^2)
 
 void multiplyMatrix(int a[][MAX_SIZE], int b[][MAX_SIZE], int c[][MAX_SIZE], int rowNa, int colNb, int colNa){
   int i, j, k;
@@ -121,7 +106,7 @@ void multiplyMatrix(int a[][MAX_SIZE], int b[][MAX_SIZE], int c[][MAX_SIZE], int
       for(k = 0; k< colNa; k++)
         c[i][j] += a[i][k] + b[k][j];
     }
-}
+}// 3차행렬 <- 중첩반복문 3개가 들어가므로 n * n * n  = O(n^3)
 
 void printMatrix(int mat[][MAX_SIZE], int rowN, int colN){
   for (int i = 0; i < rowN; i++) {
@@ -137,7 +122,7 @@ int main() {
 
   addMatrix(a, b, c, rowN, colN);
   printMatrix(c, rowN, colN);
-  getchar();
+  getchar();// 
 
   multiplyMatrix(a, b, c, 2, 2, 2);
   printMatrix(c, rowN, colN);
@@ -157,6 +142,9 @@ int main() {
 
 소스코드의 multiplyMatrix 함수의 경우 중첩반복문이 3개 들어가므로 n*n*n -> O(n^3)의 시간복잡도를 가진다.
 
+### 질문
+
+코드의 결고과 의미하는 바를 모르겠고 시간복잡도 측정을 위해 어떤 코드가 삽입되어야 하는지 궁금하다. 
 
 ## 3. 재귀.cpp
 
@@ -175,7 +163,7 @@ int repetitiveSum(int n) {
 
 	cout << endl;
 	return ret;
-}
+}// 반복형태의 덧셈
 
 int recursiveSum(int n) {
 	static int count = 0;
@@ -187,14 +175,14 @@ int recursiveSum(int n) {
 		cout << ++count << "\t";
 		return (n + recursiveSum(n - 1));
 	}
-}
+}// 재귀 형태의 덧셈
 
 int recursiveFastSum(int n) {
 	static int count = 0;
 	if (n == 1) { cout << ++count << "\t"; return 1; }
 	if (n % 2 == 1) { cout << ++count << "\t"; return recursiveFastSum(n - 1) + n; }
 	cout << ++count << "\t"; return 2 * recursiveFastSum(n / 2) + (n / 2) * (n / 2);
-}
+}// 기존 재귀의 역 형태의 덧셈
 
 int main() {
 	int num = 1024, summation = 0;
@@ -237,7 +225,10 @@ int main() {
 
 recursiveFastSum함수를 살펴보면 재귀함수이지만 recursiveFastSum의 n의값을 2로 나누므로 O(밑이 2인 로그의 n)의 시간복잡도를 가진다.
 
+### 질문
 
+'cout << ++count << "\t"; return 2 * recursiveFastSum(n / 2) + (n / 2) * (n / 2);' 라는 코드의 해석(why 홀수 짝수?)
+why recursiveFastSum이 기존 재귀의 역의 형태를 가지는지.
 
 ## 4. 다항식덧셈.c
 
@@ -303,3 +294,7 @@ void printPolynomial(polynomial P) {
 ### 소스분석
 ?다항식덧셈.c 소스코드의 addPolynomial함수를 살펴보면 변수의 선언과 초기화는 constant한 값이므로 제외하고 while문을 살펴보면 루프문은 O(log n)의 시간복잡도를 가지고
 
+# 기타
+
+\lceil x\rceil <- ceiling == 올림
+{\displaystyle \lfloor x\rfloor } <- floor == 
