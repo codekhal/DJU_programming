@@ -292,9 +292,13 @@ void printPolynomial(polynomial P) {
 ![5forpolynomials_add](https://user-images.githubusercontent.com/16266103/30514094-ae678a96-9b49-11e7-87bd-95d487c1e533.PNG)
 
 ### 소스분석
-?다항식덧셈.c 소스코드의 addPolynomial함수를 살펴보면 변수의 선언과 초기화는 constant한 값이므로 제외하고 while문을 살펴보면 루프문은 O(log n)의 시간복잡도를 가지고
 
-# 기타
+다항식덧셈.c 소스코드의 addPolynomial함수를 살펴보면 변수의 선언과 초기화는 constant한 값이므로 제외하고 while문을 살펴보면 루프문(반복)은 O(n)의 시간복잡도를 가지게 된다.
+ 
+### 질문
 
-\lceil x\rceil <- ceiling == 올림
-{\displaystyle \lfloor x\rfloor } <- floor == 
+while문 안의 if, else문의 경우 어떤 시간복잡도를 갖는지. 
+
+
+// O(logn)인 경우 n이 어떤 값으로 나눈다는 것만 사용
+ 
