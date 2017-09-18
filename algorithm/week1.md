@@ -299,6 +299,10 @@ void printPolynomial(polynomial P) {
 
 while문 안의 if, else문의 경우 어떤 시간복잡도를 갖는지. 
 
+# 참고자료
+
+![1](https://user-images.githubusercontent.com/16266103/30526906-58ca408c-9c5d-11e7-8fe1-0d141aa0c013.jpg)
+
 
 // O(logn)인 경우 n이 어떤 값으로 나눈다는 것만 사용
  
