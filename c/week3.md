@@ -73,7 +73,7 @@ int main(void)
 
 268P
 
-```
+```c
 #include <stdio.h>
 
 int main(void)
@@ -110,8 +110,8 @@ int main(void)
 }
 ```
 
-## *283p switch case*
-```
+## *siomplemaxof3.c* 283p (switch case)
+```c
 #include <stdio.h>
 
 int main(void)
