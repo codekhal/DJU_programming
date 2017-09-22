@@ -22,6 +22,11 @@ int main(void)
 }
 ```
 
+```
+콤마연산자 : a, b 와 같은 수식이 있을 때 행동은 a 를 평가하고 그 결과를 "무시"하고
+b 를 평가하는 식으로 동작
+```
+
 //246p 12, 19
 
 //247p 수식 c표현변경
@@ -38,7 +43,7 @@ int main(void)
 
 //264p 
 
-# 266p
+## tworeal.c 266p
 
 ```c
 #include <stdio.h>
@@ -66,3 +71,65 @@ int main(void)
 }
 ```
 
+268P
+
+```
+#include <stdio.h>
+
+int main(void)
+{
+  int i, j;
+  
+  printf("취득하시려는 운전면허가 1종이면 1 2종이면 2를 입력해 주세요 ^^: ");
+  scanf("%d", &i);
+  printf("점수를 입력해 주세요: ");
+  scanf("%d", j);
+  
+  if (i == 1)
+  {
+    if (j < 70)
+    {
+      printf("%d종 불합격 입니다.", i);
+    }
+    else if(j >= 70)
+    {
+      printf("%d종 합격 입니다.", i);
+    }
+  }
+  else if(i == 2)
+  {
+    if (j < 70)
+    {
+      printf("%d종 불합격 입니다.", i);
+    }
+    else if(j >- 70)
+    {
+      printf("%d종 합격 입니다.", i);
+    }
+  }
+}
+```
+
+## *283p switch case*
+```
+#include <stdio.h>
+
+int main(void)
+{
+  int x, y, z;
+  
+  printf("세 정수를 입력: ");
+  scanf("%d %d %d", &x, &y, &z);
+  
+  switch ((x > y))
+  {
+    case 0:
+      printf("최대값: %d, \n", ((y > z) ? y : z));
+      break;
+    case 1:
+      printf("최대값: %d, \n", ((x > y) ? x : y));
+      break;
+  }
+  return 0;
+}
+```
