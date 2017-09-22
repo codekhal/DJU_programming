@@ -71,7 +71,7 @@ int main(void)
 }
 ```
 
-268P
+## 268P
 
 ```c
 #include <stdio.h>
@@ -127,9 +127,82 @@ int main(void)
       printf("최대값: %d, \n", ((y > z) ? y : z));
       break;
     case 1:
-      printf("최대값: %d, \n", ((x > y) ? x : y));
+      printf("최대값: %d, \n", ((x > z) ? x : z));
       break;
   }
   return 0;
 }
 ```
+# 289p enum <- 열거형상수(switch 조건보기편하게)
+```c
+#include <stdio.h>
+
+int main(void)
+{
+  enum color { RED, GREEN, BLUE };
+  int input;
+  
+  printf("세 정수(R[0], G[1], B[2]) 중의 하나를 입력: ");
+  scanf("%d", &input);
+  
+  switch (input) {
+    case RED:
+      printf("Red\n");
+      break;
+    case GREEN:
+      printf("Green\n");
+      break;
+    case BLUE:
+      printf("Blue\n");
+      break;
+      
+    default:
+      printf("잘못된 입력\n");
+  }
+  
+  return 0;
+}
+```
+과제 291p 3, 8, 9
+
+//조건문완료
+### 반복문
+
+##1-100까지의 합
+```c
+#include <stdio.h>
+
+int main(void)
+{
+  int i, sum;
+  i = 0;
+  
+  while(i<=10)
+  {
+    sum += i;
+    i++;
+  }
+  printf("%d", sum);
+}
+```
+##구구단
+```c
+#include <stdio.h>
+
+int main(void)
+{
+  int i, j;
+  
+  scanf("%d", &j);
+  i = 1;
+  
+  while(i<=9)
+  {
+    printf("%d * %d = %d\n", j, i, j * i);
+    i++;
+  }
+}
+```
+
+
+
