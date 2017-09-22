@@ -168,7 +168,7 @@ int main(void)
 //조건문완료
 ### 반복문
 
-##1-100까지의 합
+## 1-100까지의 합
 ```c
 #include <stdio.h>
 
@@ -185,7 +185,7 @@ int main(void)
   printf("%d", sum);
 }
 ```
-##구구단
+## 구구단
 ```c
 #include <stdio.h>
 
