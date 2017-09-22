@@ -2,7 +2,7 @@
 
 243-4 표
 
-## priority.c 245p
+### priority.c 245p
 ```c
 // file: pritority.c
 #include <stdio.h>
@@ -35,6 +35,8 @@ b 를 평가하는 식으로 동작
 
 //연산자 끝!
 
+## 조건문
+
 //258p structrure of source
 
 //261p 21 3항연산자 -> printf안에 조건
@@ -43,7 +45,7 @@ b 를 평가하는 식으로 동작
 
 //264p 
 
-## tworeal.c 266p
+### tworeal.c 266p
 
 ```c
 #include <stdio.h>
@@ -71,7 +73,7 @@ int main(void)
 }
 ```
 
-## 268P
+### 268P
 
 ```c
 #include <stdio.h>
@@ -110,7 +112,7 @@ int main(void)
 }
 ```
 
-## *siomplemaxof3.c* 283p (switch case)
+### *siomplemaxof3.c* 283p (switch case)
 ```c
 #include <stdio.h>
 
@@ -133,7 +135,7 @@ int main(void)
   return 0;
 }
 ```
-# 289p enum <- 열거형상수(switch 조건보기편하게)
+### 289p enum <- 열거형상수(switch 조건보기편하게)
 ```c
 #include <stdio.h>
 
@@ -166,9 +168,9 @@ int main(void)
 과제 291p 3, 8, 9
 
 //조건문완료
-### 반복문
+## 반복문
 
-## 1-100까지의 합
+### 1-100까지의 합
 ```c
 #include <stdio.h>
 
@@ -185,7 +187,7 @@ int main(void)
   printf("%d", sum);
 }
 ```
-## 구구단
+### 구구단
 ```c
 #include <stdio.h>
 
@@ -203,7 +205,7 @@ int main(void)
   }
 }
 ```
-## 309p do while <- 메뉴보여줄경우
+### 309p do while <- 메뉴보여줄경우
 
 ```c
 #include <stdio.h>
@@ -241,7 +243,7 @@ int main(void)
   printf("%d", sum);
 }
 ```
-## 331-332ㅔ
+### 331-332p
 ```c
 #include <stdio.h>
 
@@ -269,7 +271,7 @@ int main(void)
 ```
 338p별찍기해보기
 
-## 342p 구구단
+### 342p 구구단
 ```c
 #include <stdio.h>
 #define MAX 9
@@ -289,7 +291,7 @@ int main(void)
 
 while문 <- continue <= inf loop when you lose 증감
 
-# continue break 혼합
+### continue break 혼합
 ```c
 #include <stdio.h>'
 
@@ -311,5 +313,31 @@ int main(void)
     
   }
   return 0;
+}
+```
+
+# 홀수의합
+```c
+#include <stdio.h>
+
+int main(void)
+{
+  int i, sum;
+  i = 1;
+  sum = 0;
+  char letter;
+  while(i <= 5)
+  {
+    if (i % 2 == 0)
+    {
+      i++;
+      continue;
+    }
+    sum += i;
+    i++;
+  }
+  printf("%d", sum);
+
+  return 0;  
 }
 ```
