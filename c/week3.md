@@ -203,6 +203,113 @@ int main(void)
   }
 }
 ```
+## 309p do while <- 메뉴보여줄경우
 
+```c
+#include <stdio.h>
 
+int main(void)
+{
+  int input;
+  
+  do
+  {
+    printf("정수 또는 0(종료)을 입력: ");
+    scanf("%d", &input);
+  }while(input != 0);
+  
+  puts("종료합니다.");
+  
+  return 0;
+}
+```
 
+316p
+```c
+#include <stdio.h>
+
+int main(void)
+{
+  
+  int i, j, sum;
+  sum = 1;
+  scanf("%d", &i);
+  for(j = 1; j <= i; j++)
+  {
+    sum = sum * j;
+  }
+  printf("%d", sum);
+}
+```
+## 331-332ㅔ
+```c
+#include <stdio.h>
+
+int main(void)
+{
+  int i, sum;
+  
+  for(i = 1, sum = 0; i <= 10; i++)
+    sum += i;
+  printf("1에서 10까지 합: %3d\n", sum);
+  
+  for(i = 1, sum = 0; i <= 10; )
+    sum+= i++;
+  printf("1에서 10까지 합: %3d\n", sum);
+  
+  for(i = 0, sum = 0; i <= 9;)//****
+    sum+= ++i;
+  printf("1에서 10까지 합: %3d\n", sum);
+  
+  for(i = 1, sum =0; i<= 10; sum+= i++);//****
+  printf("1에서 10까지의 합:%3d\n", sum);
+  
+  return 0;
+}
+```
+338p별찍기해보기
+
+## 342p 구구단
+```c
+#include <stdio.h>
+#define MAX 9
+int main(void)
+{
+  printf("===구구단 출력====\n");
+  for (int i =1; i <= MAX; i++)
+  {
+    printf("%6d단 출력\n", i);
+    for(int j = 2; j <= MAX; j++)
+      printf("%d x %d = %d   ", i, j, i*j);
+    
+  }
+  return 0;
+}
+```
+
+while문 <- continue <= inf loop when you lose 증감
+
+# continue break 혼합
+```c
+#include <stdio.h>'
+
+int main(void)
+{
+  char letter;
+  while(1)
+  {
+    printf("소문자를 입력하시오: ");
+    fflush(stdin);
+    scanf(" %c",&letter);
+    
+    if(letter=='Q')
+      break;
+    if(letter <'a'||letter>'z')
+      continue;
+    letter -= 32;
+    printf("변환된 대문자는 %c입니다.\n", letter);
+    
+  }
+  return 0;
+}
+```
