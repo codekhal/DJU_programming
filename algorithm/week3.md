@@ -162,6 +162,8 @@ T(n/2) + 1 		n > 1 일 때
 ```
 풀이: 12
 
+
+
 (3) 특정 알고리즘의 시간복잡도 분석
 
 1. 배열의 덧셈(재귀, 분할정복)
@@ -179,7 +181,8 @@ int sum {int a[], int left, int right) {
 }
 ```
 
-* 순환 방정식: T(n) = 2T(n/2) + c
+- 순환 방정식: T(n) = 2T(n/2) + c
+
 
 2. 이진 탐색(분할 정복)
 
@@ -195,10 +198,11 @@ int binary_search(int a[], int left, int right, int x) {
 }
 ```
 
-* 순환 방정식: T(n) = T(n/2) + c
+- 순환 방정식: T(n) = T(n/2) + c
 
 
-3. 병학 정렬(분할 정복)
+
+3. 병합 정렬(분할정복)
 
 ```c
 void merge_sort(int a[], int left, int right) {
@@ -212,9 +216,10 @@ void merge_sort(int a[], int left, int right) {
 }
 ```
 
-* 순환 방정식: T(n) = 2T(n/2) + c	
+- 순환 방정식: T(n) = 2T(n/2) + c	
 
 //c -> (n-1)(?)
+
 
 ```
 시간 복잡도 표현(Notation)
