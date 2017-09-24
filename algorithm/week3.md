@@ -204,3 +204,5 @@ Big O - O(N) : 실행 시간 상한 표현 (가장 많이 쓰임) - 최악의 �
 ```
 
 T(n)=T(divide)+T(conquer)+T(merge)
+
+https://ratsgo.github.io/data%20structure&algorithm/2017/09/11/recurrence/
