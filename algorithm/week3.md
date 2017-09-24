@@ -130,7 +130,7 @@ T(n) = 2T(n-1) + 1
 
 (1) 시간복잡도 함수의 순환방정식(recurrence equation, 점화식)
 ```
-T(n) = c	n=1 일 때
+T(n) = c		n=1   일 때
 
 aT(n/b) + d(n) + c(n)	n > 1 일 때
 ```
