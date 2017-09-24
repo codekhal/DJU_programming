@@ -181,7 +181,7 @@ int sum {int a[], int left, int right) {
 }
 ```
 
-- 순환 방정식: T(n) = 2T(n/2) + c
+순환 방정식: T(n) = 2T(n/2) + c
 
 
 #### 2. 이진 탐색(분할 정복)
@@ -198,7 +198,7 @@ int binary_search(int a[], int left, int right, int x) {
 }
 ```
 
-- 순환 방정식: T(n) = T(n/2) + c
+순환 방정식: T(n) = T(n/2) + c
 
 
 
@@ -216,7 +216,7 @@ void merge_sort(int a[], int left, int right) {
 }
 ```
 
-- 순환 방정식: T(n) = 2T(n/2) + c	
+순환 방정식: T(n) = 2T(n/2) + c	
 
 //c -> (n-1)(?)
 
