@@ -183,5 +183,5 @@ void merge_sort(int a[], int left, int right) {
 }
 ```
 
-* 순환 방정식: T(n) = 2T(n/2) + c	[c -> (n-1)(?)]
+* 순환 방정식: T(n) = 2T(n/2) + c	// [c -> (n-1)(?)]
 
