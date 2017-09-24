@@ -104,38 +104,38 @@ int main() {
 
 ## 3. 재귀 호출 알고리즘의 시간 복잡도 분석
 
-1. 시간복잡도 함수의 순환방정식(recurrence equation, 점화식)
+(1) 시간복잡도 함수의 순환방정식(recurrence equation, 점화식)
 
 T(n) = c	n=1 일 때
 aT(n/b) + d(n) + c(n)	n > 1 일 때
 
 설명: d(n)은 문제를 분할하는 데 걸리는 시간, c(n)은 부분문제들의 해를 결합하여 원래 문제의 해를 만드는 데 걸리는 시간임.
 
-2. 예제들
+(2) 예제들
 
-1) T(n) = 1 	n = 1 일 때
+1. T(n) = 1 	n = 1 일 때
 T(n/2) + 1 	n > 1 일 때
 
 풀이: 
 
-2) T(n) = 0	n = 1 일 때
+2. T(n) = 0	n = 1 일 때
 2T(n/2) + 1	n > 1 일 때
 
 풀이: 
 
-3) T(n) = 0	n = 1 일 때
+3. T(n) = 0	n = 1 일 때
 2T(n/2) + (n - 1) 	n > 1 일 때
 
 풀이: 
 
-4) T(n) = 1	n = 1 일 때
+4. T(n) = 1	n = 1 일 때
 2T(n-1) + 1	n > 1 일 때
 
 풀이: 
 
-3. 특정 알고리즘의 시간복잡도 분석
+(3) 특정 알고리즘의 시간복잡도 분석
 
-1) 배열의 덧셈(재귀, 분할정복)
+1. 배열의 덧셈(재귀, 분할정복)
 
 ```c
 int sum {int a[], int left, int right) {
@@ -152,7 +152,7 @@ int sum {int a[], int left, int right) {
 
 * 순환 방정식: T(n) = 2T(n/2) + c
 
-2) 이진 탐색(분할 정복)
+2. 이진 탐색(분할 정복)
 
 ```c
 int binary_search(int a[], int left, int right, int x) {
@@ -169,7 +169,7 @@ int binary_search(int a[], int left, int right, int x) {
 * 순환 방정식: T(n) = T(n/2) + c
 
 
-3) 병학 정렬(분할 정복)
+3. 병학 정렬(분할 정복)
 
 ```c
 void merge_sort(int a[], int left, int right) {
