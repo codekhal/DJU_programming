@@ -220,6 +220,7 @@ void merge_sort(int a[], int left, int right) {
 
 //c -> (n-1)(?)
 
+## etc
 
 ```
 시간 복잡도 표현(Notation)
