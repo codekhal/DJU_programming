@@ -58,7 +58,7 @@ int main() {
 	return 0;
 }
 ```
-### 분석
+#### <분석>
 
 이진탐색 알고리즘의 T(n)함수는 T(n) = 1 for n = 1 and T(n) = T(n/2) + O(1) for n>=1
 
