@@ -41,3 +41,42 @@ int main(void)
   }
 }
 ```
+
+# 292p
+
+## 08
+
+#include <stdio.h>
+#include <stdlib.h>
+//int by(int i);
+/*
+int main(void)
+{
+  //int* arr;
+  //input = (int*)malloc(arr);
+  int arr[8];
+  int input;
+  scanf("%d", &input);
+  for (int i = 0;  i < 8; i++)
+  {
+    arr[i] = input - (input % by(i));
+  }
+  for (int i = 1; i < 5; i++)
+  {
+    printf("%d\n", arr[i]);
+  }
+  
+}
+*/
+int by(int i)
+{
+  int i;
+  int by;
+  by = 1;
+  scanf("%d", &i);
+  for(int j = 0; j < i; j++)
+  {
+    by = 10* by;
+  }
+  return by;
+}
