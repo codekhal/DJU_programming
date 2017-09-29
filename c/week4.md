@@ -98,7 +98,7 @@ int main(void)
 }
 ```
 배열의 개수 -> 배열의 크기 / size of // sizeof(x) / sizeof(int)
-## 최소값 
+## 최소값 탐색
 ```c
 #include <stdio.h>
 #define STUDENTS 5
@@ -117,3 +117,30 @@ int main(void)
   printf("%d", min);
 }
 ```
+#include <stdio.h>
+#define CLASSES 3
+#define STUDENTS 5
+
+
+int main(void)
+{
+  int s[CLASSES][STUDENTS] = {
+    [0, 1, 2, 3, 4],
+    [10, 11, 12, 13, 14];
+    [20. 21, 22, 23, 24];
+  };
+  int clas, student, total, subtotal;
+  for(clas = 0; clas< CLASSES; clas++);
+    subtotal = 0;
+    for(student = 0; student<STUDENTS; studnet++);
+      subtotal += s[clas][students];
+    printf9"%d", clas, subtoatal/STUDENTS);
+    total += subtotal;
+  
+  printf9"%d", total/(CLASSES*STUDENTS);
+  return 0;
+    
+}
+시험범위 - 배열까지 / 금요일 3교시(11시)
+
+과제 - 347~356 5가지 프로젝트중 1개 택해서 하기
