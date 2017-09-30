@@ -166,8 +166,272 @@ int main(void)
   return 0; 
 }
 ```
-## examper_9
+## example_9 <- fix
 ```c
+#include <stdio.h>
+
+int main(void)
+{
+  char string1[30] = "Dreams come true!";
+  int *ptr1;
+  ptr1 = &string1;
+  printf("string1의 주소 = %d\tptr 1 = %d\n", &string1, ptr);
+  printf("string1 = %s\n", string1);
+  printf("ptr1 = %s\n\n", *ptr1);
+  printf("")
+  return 0;
+}
+````
+## example_10  <- fix(2/3입력가능하도록)
+```c
+#include <stdio.h>
+
+int main(void)
+{
+  char input[4][10];
+  for(int i = 0; i < 4; i++)
+    scanf("%s", input[i]);
+  puts("");
+  for(int j = 0; j < 4; j++)
+    printf("%s\n", input[j]);
+  return 0;
+}
+```
+
+## example_11 - pointer array fix..
+```c
+#include <stdio.h>
+
+int main(void)
+{
+  char ptrptr[2];
+  char *ptrArray[2] ={{"Korea"}, {"Soeul"}}; 
+  
+  printf("ptrArray[0]의 주소(&ptrArray[0]) = %d\n", &ptrArray[0]);
+  printf("ptrArray[0]의 값 (ptrArray[0])= %d\n", ptrArray[0]);
+  printf("ptrArray[0]의 참조값 (*ptrArray[0]) = %c\n",*ptrArray[0]);
+  //printf("ptrArray[0]의 참조 문자열 (*ptrArray[0]) = %s\n\n", *ptrArray);
+  printf("ptrArray[1]의 주소 (&ptrArray[1] = %d\n", &ptrArray[1]);
+  printf("ptrArray[1]의 값 (ptrArray[1]) = %d\n", ptrArray[1]);
+  printf("ptrArray[1]의 참조값 (*ptrArray[1]) = %c\n", *ptrArray[1]);
+  //printf("ptrArray[1]의 참조 문자열 (*ptrArray[1]) = %s\n\n", *ptrArray);
+  printf("ptrptr의 주소 (&ptrptr) = %d", )
+}
+```
+
+## example_12 - structure
+```c
+#include <stdio.h>
+
+int main(void)
+{
+  struct employee {
+    char name[10];
+    int year;
+    int pay;
+  };
+  struct employee A = { "이진호", 2014, 4200};
+  struct employee B = { "이한영", 2015, 3300};
+  struct employee C = { "이상원", 2015, 3500};
+  struct employee D = { "이상범", 2016, 2900};
+  printf("이름: %s\n입사: %d\n연봉: %d\n\n", A.name, A.year, A.pay);
+  printf("이름: %s\n입사: %d\n연봉: %d\n\n", B.name, B.year, B.pay);
+  printf("이름: %s\n입사: %d\n연봉: %d\n\n", C.name, C.year, C.pay);
+  printf("이름: %s\n입사: %d\n연봉: %d\n\n", D.name, D.year, D.pay);
+  return 0;
+}
+```
+## example_13 - 화살표 연산자 -- fix Sptr->name
+```c
+#include <stdio.h>
+
+int main(void)
+{
+  
+  struct employee {
+    char name[10];
+    int year;
+    int pay;
+  };
+  
+  struct employee A;
+  struct employee *Sptr = &A;
+  //Sptr->name = "이순신";
+  Sptr->year = 2015;
+  Sptr->pay = 5900;
+  
+  printf("이름: %s\n입사: %d\n연봉: %d\n\n", Sptr->name, Sptr->year, Sptr->pay);
+  return 0;
+}
+```
+# 동적메모리 할당
+
+## example_14
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+  int *pi;
+  
+  pi = (int*)malloc(sizeof(int));
+  
+  if(pi == NULL)
+  {
+    printf("동적 메모리 할당 오류\n");
+    exit(1);
+  }
+  *pi = 100;
+  printf("%d\n", *pi);
+  
+  free(pi);
+  return 0;
+}
+```
+## 중간 점검
+- 프로그램의 실행 도중에 메모리를 할당받아서 사용하는것을 동적할당 이라고 한다.
+
+- 동적으로 메모리를 할당받을 때 사용하는 대표적인 함수는 malloc이다.
+
+- 동적으로 할당된 메모리를 해제하는 함수는 free 이다.
+
+- 동적 메모리 함수의 원형은 헤더파일 stdlib.h에 정의되어 있다.
+
+## example_15
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+  char *pc = NULL;
+  
+  pc = (char *)malloc( sizeof(char));
+  if(pc == NULL)
+  {
+    printf("메모리 할당 오류\n");
+    exit(1);
+  }
+  *pc ='m';
+  printf("*pc = %c\n", *pc);
+  free(pc);
+  
+  return 0;
+}
+```
+## example_16 - fix
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+  char *pc = NULL;
+  int i =0;
+  pc = (char *)malloc(100*sizeof(char));
+  if(pc == NULL)
+  {
+    printf("메모리 할당 오류\n");
+    exit(1);
+  }
+  for(i =0;i<2;i++)
+  {
+    *(pc+i)='a'+i;
+  }
+  *(pc+i)=0;
+  
+  printf("%s\n", pc);
+  free(pc);
+  return 0;
+}
+```
+## example_17
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+  int *pi;
+  
+  pi = (int *)malloc(5 * sizeof(int));
+  
+  if(pi == NULL){
+    printf("메모리 할당 오류\n");
+    exit(1);
+  }
+  
+  pi[0] = 100;
+  pi[1] = 200;
+  pi[2] = 300;
+  pi[3] = 400;
+  pi[4] = 500;
+  
+  free(pi);
+  return 0;
+}
+```
+## example_18 ---- fix
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+  struct Book *p;
+  p = (struct Book *)malloc(2 * sizeof(struct Book));
+  
+  if(p == NULL){
+    printf("메모리 할당 오류\n");
+    exit(1);
+  }
+  
+  p->number = 1;
+  strcpy(p->title,"C Programming");
+  (p+1)->number = 2;
+  strcpy((p+1)->title,"Data Structure");
+  
+  free(p);
+  return 0;
+}
+```
+## 중간 점검
+
+- 동적 할당 후에 메모리 블록을 초기화하여 넘겨주는 함수는 calloc이다.
+
+- 할당되었던 동적 메모리의 크기를 변경하는 함수는 realloc이다.
+
+- 동적 메모리 할당에서의 단위는 byte이다.
+
+- malloc()이 반호나하는 자료형은 int 이다.
+# 재귀호출
+## example_19
+```c
+//#iifdef _MSC_VER
+//#define _CRT_SECURE_NO_WARNINGS
+//#endif
+#include <stdio.h>
+#include <stdlib.h>
+
+void TowerOfHanoi(int n, char x, char y, char z) {
+  if (n>0)
+  {
+    TowerOfHanoi(n-1, x, z, y);
+    printf("\n%c -> %c", x, y);
+    TowerOfHanoi(n-1, z, y, x);
+  }
+}
+int main(){
+  int n;
+  printf("\nEnter number of plates: ");
+  scanf("%d", &n);
+  TowerOfHanoi(n, 'A', 'B', 'C');
+  printf("\n");
+  getchar();
+  return 0;
+}
+```
 
 # 02 포인터
 # 03 구조체
