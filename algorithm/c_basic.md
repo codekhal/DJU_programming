@@ -136,6 +136,8 @@ int main(void)
   return 0;
 }
 ```
+# 02 포인터
+
 ## example_8 - pointer
 ```c
 #include <stdio.h>
@@ -218,6 +220,7 @@ int main(void)
   printf("ptrptr의 주소 (&ptrptr) = %d", )
 }
 ```
+# 03 구조체
 
 ## example_12 - structure
 ```c
@@ -264,7 +267,7 @@ int main(void)
   return 0;
 }
 ```
-# 동적메모리 할당
+# 04 동적메모리 할당
 
 ## example_14
 ```c
@@ -405,7 +408,7 @@ int main(void)
 - 동적 메모리 할당에서의 단위는 byte이다.
 
 - malloc()이 반호나하는 자료형은 int 이다.
-# 재귀호출
+# 05 재귀호출
 ## example_19
 ```c
 //#iifdef _MSC_VER
@@ -432,8 +435,3 @@ int main(){
   return 0;
 }
 ```
-
-# 02 포인터
-# 03 구조체
-# 04 동적메모리할당
-# 05 재귀호출
