@@ -301,6 +301,195 @@ void insertionSort(int A[], int n){
   }
 }
 ```
+### selection_fixed.c
+```c
+//1.selectionSort.c
+//Sorting Algorithms(selection, bubble, insertion) - O(n^2)
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <time.h>
+#define MAX_SIZE 100000
+#define SWAP(x, y, t) ((t) = (x), (x) = (y), (y) = (t))
+#define TRUE 1
+#define FALSE 0
+void selectionSort(int[], int);
+void bubbleSort1(int[], int);
+void bubbleSort2(int[], int);
+double insertionSort(int[], int);
+
+int main(void)
+{
+  int i, n;
+  clock_t start, stop;
+  double duration[4];
+  double time;
+  int A[MAX_SIZE];
+  //long *Array = A;
+  //printf("Enter the number of numbers to generate: ");
+  printf("bubble_sort - time complex\n\n");
+  //scanf("%d", &n);
+  for (n=10000; n<100000; n+=2500){
+
+  if(n<1||n>MAX_SIZE){
+    fprintf(stderr, "Improper value of n\n");
+    exit(1);
+  }
+  // 입력받은 수까지 배열에 입력하고 셔플
+  for(i=0; i<n;i++){
+    A[i] = i+1;
+    //printf(" %d ", A[i]);
+  }
+  for( int i=0; i < n; ++i )
+  {
+      int src = rand() % n;
+      int dest = rand() % n;
+
+      int temp = A[src];
+      A[src] = A[dest];
+      A[dest] = temp;
+  }
+
+  //for(int i=0; i < n; ++i )
+      //printf( "%d ", A[i] );
+
+  //printf("\n");
+  //printf(" %d ", A[i]);
+
+  start = clock();selectionSort(A,n);stop=clock(); //선택정렬
+  duration[0] = ((double)(stop-start))/CLK_TCK;
+  //printf("\n Sorted Array:(by selectionSort)\n");
+  //for(i=0;i<n;i++)
+  //  printf(" %d", A[i]);
+  //printf("\n");
+  //printf("n = %d : time elapsed in selection sorting: %f\n", n, duration[0]);
+  //getchar(); getchar();
+
+  start = clock(); bubbleSort1(A, n); stop=clock(); //버블정렬
+  duration[1] = ((double)(stop - start)) / CLK_TCK;
+  //printf("\n Sorted Array:(by bubbleSort1)\n");
+  //for(i = 0; i<n; i++)
+  //  printf(" %d", A[i]);
+  //printf("\n");
+  // printf("n = %d : time elapsed in bubble sorting 1: %f\n", n, duration[1]);
+  //getchar();
+
+  start = clock(); bubbleSort2(A, n); stop=clock(); // 개선된 버블정렬
+  duration[2] = ((double)(stop - start)) / CLK_TCK;
+  //printf("\n Sroted Array:(by bubbleSort2)\n");
+  //for(i = 0; i <n; i++)
+  //  printf(" %d", A[i]);
+  //printf("\n"); printf("n = %d : time elapsed in bubble sorting 2: %f\n", n, duration[2]);
+  //getchar();
+
+  start = clock();
+  time = insertionSort(A, n);// stop=clock(); //삽입정렬
+  //duration[3] = ((double)(stop - start)) / CLK_TCK;
+  //printf("\n Sorted Array:(by insertionSort)\n");
+  //for(i = 0; i<n; i++)
+    //printf(" %d", A[i]);
+  //printf("\n");  printf("n = %d : time elapsed in insertion sorting: %f\n", n, time);
+}
+  getchar();
+  return 0;
+}
+void selectionSort(int A[], int n){
+  int i, j, max, temp;
+  for(i = n-1; i>0; i--){
+    max = i;
+    for(j = 0; j<i; j++){
+      if(A[j] >A[max])
+        max = j;
+    }
+    SWAP(A[i], A[max], temp);
+  }
+}
+void bubbleSort1(int A[], int n){
+  int i, j, temp;
+  for(i = n-1; i>0; i--){
+    for(j = 0; j <i; j++){
+      if(A[j] >A[j+1]){
+        SWAP(A[j],A[j+1], temp);
+      }
+    }
+  }
+}
+void bubbleSort2(int A[], int n){
+  int i, j, temp, sorted;
+  for(i = n-1; i>0;i--){
+    sorted = TRUE;
+    for(j = 0; j<i; j++){
+      if(A[j]>A[j+1]){
+        SWAP(A[j],A[j+1],temp);
+        sorted = FALSE;
+      }
+    }
+    if(sorted = TRUE)
+      return;
+  }
+}
+/*void insertionSort(int A[], int n){
+  int i, loc, newItem;
+  for(i=1;i<n;i++){
+    loc = i-1;
+    newItem = A[i];
+    while(loc>=0&&newItem<A[loc]){
+      A[loc+1]=A[loc];
+      loc--;
+    }
+    A[loc+1]=newItem;
+  }
+}*/
+double insertionSort(int A[], int n)
+{
+   clock_t start, stop;
+   start = clock();
+   int i, key, j;
+   double duration;
+   for (i = 1; i < n; i++)
+   {
+       key = A[i];
+       j = i-1;
+
+       /* Move elements of arr[0..i-1], that are
+          greater than key, to one position ahead
+          of their current position */
+       while (j >= 0 && A[j] > key)
+       {
+           A[j+1] = A[j];
+           j = j-1;
+       }
+       A[j+1] = key;
+   }
+  stop=clock();
+   duration = ((double)(stop - start)) / CLK_TCK;
+   return duration;
+}
+
+/*void ShufflingNumber( )
+{
+    int A[n];
+    for( int i=0; i < n; ++i )
+        A[i] = i+1;
+
+    // 셔플링(20번 섞는다)
+    for( int i=0; i < 20; ++i )
+    {
+        int src = rand() % n;
+        int dest = rand() % n;
+
+        int temp = A[src];
+        A[src] = A[dest];
+        A[dest] = temp;
+    }
+
+    for(int i=0; i < n; ++i )
+        printf( "%d ", A[i] );
+
+    printf("\n");
+}*/
+```
+
 ### 병합정렬.c
 ```c
 #ifdef _MSC_VER
@@ -371,6 +560,110 @@ int main(){
   return 0;
 }
 ```
+### 병합정렬_fixed.c
+```c
+#ifdef _MSC_VER
+#define _CRT_SECURE_NO_WARNINGS
+#endif
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#define MAX_SIZE 100000
+
+void merge(int a[], int left, int mid, int right){
+  int sorted[MAX_SIZE];
+  int left1 = left, left2 = mid + 1;
+  int i = left, j;
+  while (left1 <= mid && left2<= right) {
+    if(a[left1] <= a[left2]){
+      sorted[i] = a[left1];
+      i++, left1++;
+    }
+    else{
+      sorted[i] = a[left2];
+      i++, left2++;
+    }
+  }
+  if(i<=right){
+    if(left1<=mid){
+      for(j = left1; j<=mid; j++){
+        sorted[i] = a[j];
+        i++;
+      }
+    }
+    else if(left2 <= right){
+      for(j = left2; j<=right; j++){
+        sorted[i] = a[j];
+        i++;
+      }
+    }
+  }
+  for(i = left; i<= right; i++) a[i] = sorted[i];
+}
+void merge_sort(int a[], int left, int right){
+  int mid;
+  if(left<right) {
+    mid = (left + right) /2;
+    merge_sort(a, left, mid);
+    merge_sort(a, mid+1, right);
+    merge(a, left, mid, right);
+  }
+}
+int arr_size(int a[]){
+  int i =0, count =0;
+  while(a[i] != 0){
+    count++; i++;
+  }
+  return count;
+}
+int main(){
+
+  int a[MAX_SIZE];// = {15,21,3,12,15,7,32,4,25,9,18,1,2,5,100,150};
+  int i, arrN;
+  int n;
+  double duration;
+  clock_t start, stop;
+  //printf("Enter the number of numbers to generate: ");
+  //scanf("%d", &n);
+  printf("merge_sort - time complex\n");
+  for (n=10000; n<100000; n+=2500){
+
+  if(n<1||n>MAX_SIZE){
+    fprintf(stderr, "Improper value of n\n");
+    exit(1);
+  }
+  for(i=0; i<n;i++)
+    a[i] = i+1;
+  for( int i=0; i < n; ++i )
+  {
+      int src = rand() % n;
+      int dest = rand() % n;
+
+      int temp = a[src];
+      a[src] = a[dest];
+      a[dest] = temp;
+  }
+
+  //for(int i=0; i < n; ++i )
+  //    printf( "%d ", a[i] );
+
+  printf("\n");
+  //for(i=0; i<n;i++)
+//    a[i] = rand()%MAX_SIZE;
+  arrN = arr_size(a);
+  //printf("before..\t");
+  //for(i = 0; i < arrN; i++) printf("%d\t", a[i]);
+  //printf("\n\n\n");
+  //printf("after..mergeSort\t");
+  start = clock();merge_sort(a, 1, arrN - 1);stop=clock();
+  //for(i=0;i<arrN;i++)printf("%d\t", a[i]);
+  duration = ((double)(stop-start))/CLK_TCK;
+  //printf("\n\n\n");
+  printf("");printf("n = %d : time elapsed in selection sorting: %f", n, duration);
+}getchar();
+  return 0;
+}
+```
 ### 퀵정렬.c
 ```c
 #ifdef _MSC_VER
@@ -426,9 +719,104 @@ int main(){
   return 0;
 }
 ```
+### 퀵정렬_fixed.c
+```c
+#ifdef _MSC_VER
+#define _CRT_SECURE_NO_WARNINGS
+#endif
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#define MAX_SIZE 100000
+void swap(int *n1, int *n2){
+  int t;
+  t = *n1;
+  *n1 = *n2;
+  *n2 = t;
+}
+void partition(int a[], int left, int right, int *pivot_index){
+  int pivot = a[left];
+  int i = left +1, j = right;
+  do{
+    while(i<=right&&a[i]<pivot)i++;
+    while(j>=left&&a[j]>pivot)j--;
+    if(i<j)swap(&a[i],&a[j]);
+  }while(i<j);
+  swap(&a[left],&a[j]);
+  *pivot_index = j;
+}
+void quick_sort(int a[], int left, int right){
+  int pivot_index =0;
+  if(right > left){
+    partition(a, left, right, &pivot_index);
+    quick_sort(a, left, pivot_index - 1);
+    quick_sort(a, pivot_index + 1, right);
+  }
+}
+int arr_size(int a[]){
+  int i = 0, count = 0;
+  while(a[i] != 0){
+    count++; i++;
+  }
+  return count;
+}
+int main(){
+  int a[MAX_SIZE];// = {15, 21, 3, 12, 15, 7, 32, 4, 25, 9, 18, 1, 2, 5, 100, 150};
+  int i, arrN;
+  int n;
+  double duration;
+  clock_t start, stop;
+
+  //printf("Enter the number of numbers to generate: ");
+  printf("quick_sort - time complex\n\n");
+  //scanf("%d", &n);
+  for (n=10000; n<100000; n+=2500){
+  if(n<1||n>MAX_SIZE){
+    fprintf(stderr, "Improper value of n\n");
+    exit(1);
+  }
+  // 입력받은 수까지 배열에 입력하고 셔플
+  for(i=0; i<n;i++){
+    a[i] = i+1;
+    //printf(" %d ", A[i]);
+  }
+  for( int i=0; i < n; ++i )
+  {
+      int src = rand() % n;
+      int dest = rand() % n;
+
+      int temp = a[src];
+      a[src] = a[dest];
+      a[dest] = temp;
+  }
+
+  //for(int i=0; i < n; ++i )
+  //    printf( "%d ", a[i] );
+
+  //printf("\n");
+
+  arrN = arr_size(a);
+  //printf("before..");
+  //for(i=0;i<arrN;i++)printf("%d\t",a[i]);
+  //printf("\n\n\n");
+  //printf("after..quickSort");
+  start = clock();quick_sort(a,1,arrN-1);stop=clock();
+  duration = ((double)(stop - start)) / CLK_TCK;
+
+  //for(i=0;i<arrN;i++)printf("%d\t",a[i]);
+  //printf("\n\n\n");
+  //printf("\n");
+  printf("n = %d : time elapsed in insertion sorting: %f\n", n, duration);
+}
+  getchar();
+  return 0;
+}
+```
 
 ## 04. 확인해보면 좋은 사이트
-
+- 각 알고리즘 시각화
 https://www.toptal.com/developers/sorting-algorithms/
 
+- 각각의 정렬의 시간복잡도 분석(본문 참조)
+http://hsp1116.tistory.com/33
 
