@@ -13,7 +13,7 @@
 
 교수님의 예제코드를 참고하여 
 
-```
+```c
 printf("Enter the number of numbers to generate: ");
 scanf("%d", &n);
 
@@ -23,7 +23,7 @@ if(n<1||n>MAX_SIZE){
 }
 ```
 
-```
+```c
 clock_t start, stop;
 start = clock(); function(A, n); stop=clock();
 ```
@@ -32,11 +32,11 @@ start = clock(); function(A, n); stop=clock();
 
 또한 정렬의 특성상 1. 주어진 범위의 수가 모두 있어야 하고 2. 수가 중복되면 안된다는 조건을 만족해야 했기 때문에
 
-```
+```c
 for(i=0; i<n;i++)
   a[i] = i+1;
 ```
-```
+```c
 void ShufflingNumber( )
 {
     int A[n];
