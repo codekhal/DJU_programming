@@ -30,7 +30,11 @@ start = clock(); function(A, n); stop=clock();
 
 위와같은 코드를 병합정렬, 퀵정렬에 적용하였습니다.
 
-또한 정렬의 특성상 1. 주어진 범위의 수가 모두 있어야 하고 2. 수가 중복되면 안된다는 조건을 만족해야 했기 때문에
+또한 정렬의 특성상 
+
+1. 주어진 범위의 수가 모두 있어야 하고 
+
+2. 수가 중복되면 안된다는 조건을 만족해야 했기 때문에
 
 ```c
 for(i=0; i<n;i++)
@@ -82,7 +86,7 @@ for문을 적용하여 결과값을 출력하는데 필요없는 printf를 주�
 ![4 merge_sort](https://user-images.githubusercontent.com/16266103/31339427-cffc7cce-ad3d-11e7-84b9-176d6b7745b9.PNG)
 ![5 quick_sort](https://user-images.githubusercontent.com/16266103/31339505-0530b842-ad3e-11e7-93a5-2445206c1300.PNG)
 
-!! mergeSort2와 insertion 정렬의 시간복잡도는 여러 시도를 해보았지만 다른 정렬이 측정가능한 범위에서 시간측정을 할 수 없었습니다. <-
+<!! mergeSort2와 insertion 정렬의 시간복잡도는 여러 시도를 해보았지만 다른 정렬이 측정가능한 범위에서 시간측정을 할 수 없었습니다. <->
 
 
 ## 02. 소스코드
