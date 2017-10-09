@@ -80,7 +80,7 @@ for문을 적용하여 결과값을 출력하는데 필요없는 printf를 주�
 ![2 selection_sort](https://user-images.githubusercontent.com/16266103/31339428-d03cf146-ad3d-11e7-87eb-7ff570fa1eed.PNG)
 ![3 bubble_sort](https://user-images.githubusercontent.com/16266103/31339426-cfcfd1ce-ad3d-11e7-8add-d58a56a9b6e5.PNG)
 ![4 merge_sort](https://user-images.githubusercontent.com/16266103/31339427-cffc7cce-ad3d-11e7-84b9-176d6b7745b9.PNG)
-
+![5 quick_sort](https://user-images.githubusercontent.com/16266103/31339505-0530b842-ad3e-11e7-93a5-2445206c1300.PNG)
 
 !! mergeSort2와 insertion의 시간복잡도는 여러 시도를 해보았지만 다른 정렬이 측정가능한 범위에서 시간측정을 할 수 없었습니다. <-
 
