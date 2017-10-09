@@ -63,8 +63,8 @@ void ShufflingNumber( )
 
     printf("\n");
 }
-출처: http://p7kell.wikidot.com/1-n-random-number-shuffling
 ```
+<출처: http://p7kell.wikidot.com/1-n-random-number-shuffling>
 
 와 같이 조건을 만족시킬 수 있는 코드를 삽입하였습니다.
 
