@@ -1,8 +1,92 @@
+# Algorithm 수업 3주차 과제
+
 ```
 교수님이 원하는 것 : n을 테이터 개수로 바꿔가면서 나온 결과를 그래프형태로 표현한 후 시간차이가 나는 이유를 서술해야 함.
 ```
+## 01. 각 정렬의 시간복잡도 시각화
 
-## selectionSort.c
+<과정>
+
+시간복잡도를 시각화 하기위해 아래와 같이 제 나름대로 코드를 수정하는 과정을 거쳤습니다.
+
+입력된 데이터량에 따라 어느정도의 시간이 걸렸는지를 확인하기 위해서
+
+교수님의 예제코드를 참고하여 
+
+```
+printf("Enter the number of numbers to generate: ");
+scanf("%d", &n);
+
+if(n<1||n>MAX_SIZE){
+  fprintf(stderr, "Improper value of n\n");
+  exit(1);
+}
+```
+
+```
+clock_t start, stop;
+start = clock(); function(A, n); stop=clock();
+```
+
+위와같은 코드를 병합정렬, 퀵정렬에 적용하였습니다.
+
+또한 정렬의 특성상 1. 주어진 범위의 수가 모두 있어야 하고 2. 수가 중복되면 안된다는 조건을 만족해야 했기 때문에
+
+```
+for(i=0; i<n;i++)
+  a[i] = i+1;
+```
+```
+void ShufflingNumber( )
+{
+    int A[n];
+    for( int i=0; i < n; ++i )
+        A[i] = i+1;
+
+    // 셔플링(20번 섞는다)
+    for( int i=0; i < 20; ++i )
+    {
+        int src = rand() % n;
+        int dest = rand() % n;
+
+        int temp = A[src];
+        A[src] = A[dest];
+        A[dest] = temp;
+    }
+
+    for(int i=0; i < n; ++i )
+        printf( "%d ", A[i] );
+
+    printf("\n");
+}
+출처: http://p7kell.wikidot.com/1-n-random-number-shuffling
+```
+
+와 같이 조건을 만족시킬 수 있는 코드를 삽입하였습니다.
+
+코드가 제대로 작동한다는 것을 확인한 뒤
+
+for문을 적용하여 결과값을 출력하는데 필요없는 printf를 주석처리하여 아래와 같은 결과를 얻었습니다.
+
+![6 selection_sort](https://user-images.githubusercontent.com/16266103/31339323-7e694c20-ad3d-11e7-80f9-128feb8acdc1.PNG)
+![7 bubble_sort](https://user-images.githubusercontent.com/16266103/31339324-7e969806-ad3d-11e7-8a5e-8c55642b6101.PNG)
+![8 merge_sort](https://user-images.githubusercontent.com/16266103/31339325-7ed6b8a0-ad3d-11e7-8603-26b299e4dd1c.PNG)
+![9 quick_sort](https://user-images.githubusercontent.com/16266103/31339387-ac8c96ac-ad3d-11e7-9ea3-bf005ecfedd6.PNG)
+![0 data_of_sort](https://user-images.githubusercontent.com/16266103/31339416-c1500c4a-ad3d-11e7-83d0-8ce9c3170d63.PNG)
+
+이를 그래프로 표현하면 아래와 같습니다.
+
+![1 all_sort](https://user-images.githubusercontent.com/16266103/31339429-d06f76e8-ad3d-11e7-87c8-4c51c895545c.PNG)
+![2 selection_sort](https://user-images.githubusercontent.com/16266103/31339428-d03cf146-ad3d-11e7-87eb-7ff570fa1eed.PNG)
+![3 bubble_sort](https://user-images.githubusercontent.com/16266103/31339426-cfcfd1ce-ad3d-11e7-8add-d58a56a9b6e5.PNG)
+![4 merge_sort](https://user-images.githubusercontent.com/16266103/31339427-cffc7cce-ad3d-11e7-84b9-176d6b7745b9.PNG)
+
+
+!! mergeSort2와 insertion의 시간복잡도는 여러 시도를 해보았지만 다른 정렬이 측정가능한 범위에서 시간측정을 할 수 없었습니다. <-
+
+
+
+### selectionSort.c
 ```c
 //1.selectionSort.c
 //Sorting Algorithms(selection, bubble, insertion) - O(n^2)
@@ -111,7 +195,7 @@ void insertionSort(int A[], int n){
   }
 }
 ```
-## 병합정렬.c
+### 병합정렬.c
 ```c
 #ifdef _MSC_VER
 #define _CRT_SECURE_NO_WARNINGS
@@ -181,7 +265,7 @@ int main(){
   return 0;
 }
 ```
-## 퀵정렬.c
+### 퀵정렬.c
 ```c
 #ifdef _MSC_VER
 #define _CRT_SECURE_NO_WARNINGS
@@ -236,3 +320,4 @@ int main(){
   return 0;
 }
 ```
+## 
