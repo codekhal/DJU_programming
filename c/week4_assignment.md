@@ -35,26 +35,32 @@ int main(void)
 ## 07 <- 
 ```c
 #include <stdio.h>
-#include <stdlib.h>
+
 int main(void)
 {
-  char inp[10];
-  int count = 0;
-  int length = 0;
-  scanf("%s", &inp);
-  int i = 1;
-  do{
-    if (inp[i] == NULL)
-      length += 1;
-    else
-      count += 1;
-  }while(i < 10);
-  //printf("%d %d", length, count);
-  for(int j = 0; j < count+1; j++)
-  {
-    printf("%c", inp[count-j]);
-  }
-  return 0;
+  char inp[100];
+  int nu;
+   char tmp;
+   scanf("%d", &nu);
+   scanf("%s", inp);
+   
+   /*
+   int rev = nu - 1;
+
+   for(int j = 0; j < nu; j++)
+   {
+         tmp = inp[j];
+         inp[j] = inp[rev];
+         inp[rev] = tmp;
+         rev--;
+   }
+*/
+
+   for(int k = nu-1; k >=0; k--)
+      printf("%c", inp[k]);
+
+
+   return 0;
 }
 ```
 ## 13
