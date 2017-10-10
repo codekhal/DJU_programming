@@ -1,3 +1,6 @@
+insertionsort 이미 소팅이 되어있는상태에서 뒤에걸 swap
+why insertion sort is more popular using then bubble sort?
+1. 2. large data
 # Algorithm 수업 3주차 과제
 
 
