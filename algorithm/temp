@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <malloc.h>
+#include <sring.h>
+typedef struct Node {
+	char data[4];
+	struct Node *link;
+} linkedNode;
+typedef struct LinkedList {
+	linkedNode *head;
+} linkedList;
+
+linkedList *createLinkedList() {
+	linkedList *listInstance;
+	listInstance = (linkedList *)malloc(sizeof(linkedList));
+	listInstance->head = NULL;
+
+	return listInstance;
+}
+linkedNode *createListNode(char s[]){
+	linkedNode *nodeInstance;
+	nodeInstance = (linkedNode *)malloc(sizeof(linkedNode));
+	strcpy_s(nodeInstance->data, (strlen(s) + 1), s);
+	node Instsance->link = NULL;
+
+	return nodeInstance;
+}
+
+int main(void)
+{
+
+}
