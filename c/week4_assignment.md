@@ -127,3 +127,38 @@ int main(void)
   return 0;
 }
 ```
+## 04
+```c
+#include <stdio.h>
+
+int main(void)
+{
+  int prime[100];
+  int nu = 0;
+  int i,j;
+    for(i = 2; i <= 300; i++) {
+        for(j = 2; j <= i-1; j++) {
+            if(i % j == 0) {
+                break;
+            }
+        }
+        if(i == j) {
+            prime[nu] = i;
+            nu++;
+        }
+    }
+    nu = 0;
+    for(int l = 1; l <= 10; l++)
+    {
+      for(int m = 10-l; m>0; m--)
+        printf("  ");
+      for(int k = 0; k<l; k++)
+      {
+          printf("%3d", prime[nu]);
+          nu++;
+          printf("  ");
+      }
+      printf("\n");
+    }
+}
+```
