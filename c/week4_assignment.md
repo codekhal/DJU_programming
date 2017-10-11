@@ -156,7 +156,7 @@ int main(void)
       {
           printf("%3d", prime[nu]);
           nu++;
-          printf("  ");
+          printf(" ");
       }
       printf("\n");
     }
