@@ -121,7 +121,7 @@ int main(void)
 #define CLASSES 3
 #define STUDENTS 5
 
-
+```c
 int main(void)
 {
   int s[CLASSES][STUDENTS] = {
@@ -141,6 +141,7 @@ int main(void)
   return 0;
     
 }
+```
 시험범위 - 배열까지 / 금요일 3교시(11시)
 
 과제 - 347~356 5가지 프로젝트중 1개 택해서 하기
