@@ -1,23 +1,23 @@
-# 수업
+# 연산자
 
 ## 243-4 표
 ![c](https://user-images.githubusercontent.com/16266103/31728902-87d6ed8a-b468-11e7-80ab-c96c9df7c30d.jpg)
 
 >> ++a, --a, !, ~, sizeof, -, +, &, * // 우에서 좌로
 
->> *, /, % // 좌에서 우로
+> *, /, % // 좌에서 우로
 
->> +, - // 좌에서 우로
+> +, - // 좌에서 우로
 
->> <, >, <=, >= // 좌에서 우로
+> <, >, <=, >= // 좌에서 우로
 
->> ==, != // 좌에서 우로
+> ==, != // 좌에서 우로
 
->> && // 좌에서 우로
+> && // 좌에서 우로
 
->> || // 좌에서 우로
+> || // 좌에서 우로
 
->> 콤마 < 대입 < 조건(삼항) < 논리 < 관계 < 산술 < 단항 < 괄호와 대괄호 // 논리 < 관계 < 산술 -> 이항연산자
+> 콤마 < 대입 < 조건(삼항) < 논리 < 관계 < 산술 < 단항 < 괄호와 대괄호 // 논리 < 관계 < 산술 -> 이항연산자
 
 ## priority.c 245p
 
@@ -76,19 +76,19 @@ int main(void)
 
 ## //247p 수식 c표현변경
 
->> (a + b) * (x + y) * (x + y)
+> (a + b) * (x + y) * (x + y)
 
->> 4*x*x*x + 3*x*x - 5*x + 10
+> 4*x*x*x + 3*x*x - 5*x + 10
 
->> (a + b) / (a - b)
+> (a + b) / (a - b)
 
->> (5.0 / 9) * (F - 32)
+> (5.0 / 9) * (F - 32)
 
->> 9.0 / 5 * C + 32
+> 9.0 / 5 * C + 32
 
->> (1 - x) / (x * x)
+> (1 - x) / (x * x)
 
->> (-b + sqrt(b*b - 4*a*c)) / 2*a // sqrt(x) 제곱근을 구하는 함수
+> (-b + sqrt(b*b - 4*a*c)) / 2*a // sqrt(x) 제곱근을 구하는 함수
 /////
 
 //숙제 -> 249p 3, 6, 8 목요일 밤 12시
@@ -97,15 +97,62 @@ int main(void)
 
 # 조건문
 
-//258p structrure of source
+## //258p structrure of source
+```c
+//#define _CRT_SECURE_NO_WARNINS
+#include <stdio.h>
 
-//261p 21 3항연산자 -> printf안에 조건
+int main(void)
+{
+  double temperature;
+  
+  printf("현재 온도 입력: ");
+  scanf("%lf", &temperature);
+  
+  if (temperature >= 32.0)
+  {
+    printf("폭염 주의보를 발령합니다.\n");
+    printf("건강에 유의하세요.\n");
+  }
+  printf("현재 온도는 섭씨 %.2f 입니다.\n", temperature);
+  
+  return 0;
+}
+```
+## //261p 21 3항연산자 -> printf안에 조건
+```c
+// file: ifelse.c
+#define _CRT_SECURE_NO_WARNINGS
 
-//262p 순서
+#include <stdio.h>
 
+int main(void)
+{
+  int n;
+  
+  printf("정수 입력: ");
+  scanf("%d", &n);
+  
+  if (n % 2)
+    printf("홀수");
+  else
+    printf("짝수");
+  
+  printf("입니다.\n");
+  
+  //조건연산자 이용
+  (n % 2) ? printf("홀수") : printf("짝수");
+  printf("입니다.\n");
+  
+  return 0;
+}
+```
+
+## //262p 순서
+////////////////////////
 //264p 
 
-### tworeal.c 266p
+## tworeal.c 266p
 
 ```c
 #include <stdio.h>
