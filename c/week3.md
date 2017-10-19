@@ -199,7 +199,7 @@ int main(void)
 }
 ```
 
-## tworeal.c 266p
+## lab tworeal.c 266p
 
 ```c
 #include <stdio.h>
@@ -359,7 +359,7 @@ int main(void)
   }
 }
 ```
-### 309p do while <- 메뉴보여줄경우(입력 후에 검사를 진행하는 처리 과정으로 do while 문으로 구현이 적합)
+## 309p do while <- 메뉴보여줄경우(입력 후에 검사를 진행하는 처리 과정으로 do while 문으로 구현이 적합)
 
 ```c
 #include <stdio.h>
@@ -398,8 +398,6 @@ int main(void)
 }
 ```
 ## 322
-
-## 331-332p
 ```c
 #include <stdio.h>
 
@@ -425,7 +423,83 @@ int main(void)
   return 0;
 }
 ```
-338p별찍기해보기
+## 330-332p
+```c
+#include <stdio.h>
+
+int main(void)
+{
+  const int MAX = 15;
+  
+  printf("1에서 %d까지 정수 중에서 3으로 나누어 떨어지지 않는 수\n", MAX);
+  for(int i = 1; i <= MAX; i++)
+  {
+    if (i % 3 == 0)
+      continue;
+    printf("%3d", i);
+  }
+  puts("");
+  
+  return 0;
+}
+```
+```c
+#include <stdio.h>
+
+int main(void)
+{
+  int count = 1;
+loop :
+  printf("%3d", count);
+  if(++count <= 10)
+    goto loop;
+  
+  printf("\n프로그램을 종료합니다.\n");
+  
+  return 0;
+}
+```
+```c
+#include <stdio.h>
+
+int main(void)
+{
+  int input;
+  
+  do {
+    printf("\t [1] 한식\n");
+    printf("\t [2] 양식\n");
+    printf("\t [3] 분식\n");
+    printf("\t [4] 기타\n");
+    printf("메뉴 번호 선택 후 [Enter] : ");
+    scanf("%d", &input);
+    printf("선택 메뉴 %d\n", input);
+    if (input <= 4 && input >= 1)
+      break;
+  } while(1);
+  
+  return 0;
+  
+}
+```
+
+## 338p별찍기해보기
+```c
+#include <stdio.h>
+
+int main(void)
+{
+  int a = 5;
+  for(int i = 1 ; i <= a; i++)
+  {
+    for (int j = 1; j <= i; j++)
+      printf("*");
+    puts("");
+  }
+  
+  return 0;
+}
+```
 
 ### 342p 구구단
 ```c
@@ -447,7 +521,7 @@ int main(void)
 
 while문 <- continue <= inf loop when you lose 증감
 
-### continue break 혼합
+## continue break 혼합
 ```c
 #include <stdio.h>'
 
@@ -472,7 +546,7 @@ int main(void)
 }
 ```
 
-### 홀수의합
+## 홀수의합
 ```c
 #include <stdio.h>
 
@@ -498,4 +572,23 @@ int main(void)
 }
 ```
 
-334p 해보기
+## 334p 해보기
+```c
+#include <stdio.h>
+
+int main(void)
+{
+  const int MAX = 15;
+  
+  printf("1에서 %d까지 정수 주에서 5로 나누어 떨어지지 않는 수\n", MAX);
+  for(int i = 1; i<=MAX; i++)
+  {
+    if(i%5)
+      continue;
+    printf("%3d", i);
+  }
+  puts("");
+  
+  return 0;
+}
+```
