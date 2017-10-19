@@ -42,9 +42,11 @@ short -> -32,768-32,767 // (양수측에 0이 낑김)
 unsigned short -> 0-65,535 // 2byte
 
 
-int -> -2,147,483,648-2,147,438,647
+int -> -2,147,483,648-2,147,438,647(21억)
 
 unsigned int -> 0-4,294,967,295 // 4bytye
+
+자동형변환 -> 더 큰 자료형으로 통일
 
 강제형변환
 
@@ -59,12 +61,19 @@ double g = (double)a / b;
 
 삼항연산자 = 조건연산자
 
+while문 scanf 위에 fflush(stdin)
+
+&op,1
+
+센티넬 - 입력의끝을알림
+
 # 03  변수
 
 # 05 연산자
 
 ## 243-4 표
 ![c](https://user-images.githubusercontent.com/16266103/31728902-87d6ed8a-b468-11e7-80ab-c96c9df7c30d.jpg)
+https://dojang.io/mod/page/view.php?id=96
 
 > ++a, --a, !, ~, sizeof, -, +, &, * // 우에서 좌로
 
@@ -720,3 +729,119 @@ int factorial(int n)
 } 
 
 ```
+## 함수로 최대값 구하기
+
+```c
+#include <stdio.h>
+int get_max(int x, int y);
+
+int main(void)
+{
+  int i, j;
+  scanf("%d %d", &i, &j);
+  printf("max number = %d", get_max(i, j));
+  return 0;
+}
+
+int get_max(int x, int y)
+{
+  if(x > y) return(x);
+  else return(y);
+}
+```
+
+// 347p project may will give assighnmet when professor want
+
+## 저장 유형 지정자 static -> 지역변수가 "정적변수"로 된다
+
+```c
+#include <stdio.h>
+void sub(vodi);
+
+int main(void)
+{
+  int i;
+  for ( i= 0; i < 3; i ++)
+    sub();
+  return 0;
+}
+void sub(void)
+{
+  int auto_count = 0;
+  static int static_count = 0;
+  
+  auto_count++;
+  static_count++;
+  printf("auto_count=%d\n", auto_count);
+  printf("static_count=%d\n", static_count);
+}
+```
+## 저장 유형 지정자 register(레지스터에직접저장)
+
+## 저장 유형 지정자 extern -> 변수가 현재 범위가 아닌 다른 곳에서 선언되었다는 것을 알림.
+
+```c
+#include <stdio.h>
+int all_files;
+extern void sub(void);
+
+int main(void)
+{
+	sub();
+	printf("%d\n", all_files);
+	return 0;
+}
+```
+
+```c
+extern int all_files;
+void sub(void)
+{
+	all_files = 10;
+}
+```
+## 순환함수 -> recursion
+
+### for문
+```c
+#include <stdio.h>
+
+
+
+int main(void){
+
+        int i ;
+        int num;
+        int head = 0;
+        int mid = 0;
+        int rear = 1;
+
+        printf("\n 피보나치 수 입력 : \n");
+        scanf("%d" , &num) ;
+
+        for(i = 0 ; i < num ; i++){
+                printf("%d " , head) ;
+                mid = head+rear;
+                head = rear;
+                rear = mid;
+        }
+
+        printf("\n\n");
+
+        return 0 ;
+}
+```
+함수정의
+
+함수호출
+
+main함수는 운영체제에서 호출
+
+
+함수 정의 -> 반환형 함수이름(매개변수(parameter)){}
+
+함수 호출 -> 함수이름(실인수)
+
+
+함수를 main함수 아래에 쓸 경우 함수원형(prototype)을 main함수 위에 적는다
+
