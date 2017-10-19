@@ -22,7 +22,7 @@ int get_max(int x, int y)
 }
 ```
 
-347p project may will give assighnmet when professor want
+// 347p project may will give assighnmet when professor want
 
 ## 저장 유형 지정자 static -> 지역변수가 "정적변수"로 된다
 
@@ -48,9 +48,9 @@ void sub(void)
   printf("static_count=%d\n", static_count);
 }
 ```
-## 저장 유형 지정자 register
+## 저장 유형 지정자 register(레지스터에직접저장)
 
-## 저장 유형 지정자 extern -> 변수가 현재 번위가 아닌 다른 곳에서 선언되었다는 것을 알림.
+## 저장 유형 지정자 extern -> 변수가 현재 범위가 아닌 다른 곳에서 선언되었다는 것을 알림.
 
 ```c
 #include <stdio.h>
