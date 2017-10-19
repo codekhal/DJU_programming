@@ -74,8 +74,34 @@ void sub(void)
 ```
 ## 순환함수 -> recursion
 
+### for문
 ```c
-팩토리얼
+#include <stdio.h>
+
+
+
+int main(void){
+
+        int i ;
+        int num;
+        int head = 0;
+        int mid = 0;
+        int rear = 1;
+
+        printf("\n 피보나치 수 입력 : \n");
+        scanf("%d" , &num) ;
+
+        for(i = 0 ; i < num ; i++){
+                printf("%d " , head) ;
+                mid = head+rear;
+                head = rear;
+                rear = mid;
+        }
+
+        printf("\n\n");
+
+        return 0 ;
+}
 ```
 
 ## 배열-> 변수쓰듯이 써라(연이어져있음)
