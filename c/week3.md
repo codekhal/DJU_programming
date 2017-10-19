@@ -1,4 +1,4 @@
-# 연산자
+# 05 연산자
 
 ## 243-4 표
 ![c](https://user-images.githubusercontent.com/16266103/31728902-87d6ed8a-b468-11e7-80ab-c96c9df7c30d.jpg)
@@ -95,7 +95,7 @@ int main(void)
 
 //연산자 끝!
 
-# 조건문 // enum is the most careful part of our exam
+# 06 조건문 // enum is the most careful part of our exam
 
 ## //258p structrure of source
 ```c
@@ -322,7 +322,7 @@ int main(void)
 //과제 291p 3, 8, 9
 
 //조건문완료
-# 반복문
+# 07 반복문
 
 ## 1-100까지의 합
 ```c
