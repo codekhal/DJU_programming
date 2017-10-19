@@ -1,4 +1,4 @@
-# 연습문제 풀이 p
+# 연습문제 풀이 162p
 
 # 02
 ```c
@@ -6,9 +6,8 @@
 
 int main(void)
 {
-	char a = '3df';
 	printf("%x\n", 47);
-	printf("%d\n", a);
+	printf("%d\n", 0x3df);
 }
 ```
 
