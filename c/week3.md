@@ -3,7 +3,7 @@
 ## 243-4 표
 ![c](https://user-images.githubusercontent.com/16266103/31728902-87d6ed8a-b468-11e7-80ab-c96c9df7c30d.jpg)
 
->> ++a, --a, !, ~, sizeof, -, +, &, * // 우에서 좌로
+> ++a, --a, !, ~, sizeof, -, +, &, * // 우에서 좌로
 
 > *, /, % // 좌에서 우로
 
@@ -89,13 +89,13 @@ int main(void)
 > (1 - x) / (x * x)
 
 > (-b + sqrt(b*b - 4*a*c)) / 2*a // sqrt(x) 제곱근을 구하는 함수
-/////
+
 
 //숙제 -> 249p 3, 6, 8 목요일 밤 12시
 
 //연산자 끝!
 
-# 조건문
+# 조건문 // enum is the most careful part of our exam
 
 ## //258p structrure of source
 ```c
@@ -119,6 +119,7 @@ int main(void)
   return 0;
 }
 ```
+
 ## //261p 21 3항연산자 -> printf안에 조건
 ```c
 // file: ifelse.c
@@ -141,16 +142,62 @@ int main(void)
   printf("입니다.\n");
   
   //조건연산자 이용
-  (n % 2) ? printf("홀수") : printf("짝수");
-  printf("입니다.\n");
+  (n % 2) ? printf("홀수") : printf("짝수"); // ** 3항연산자
+  printf("입니다.\n");
   
   return 0;
 }
 ```
 
 ## //262p 순서
-////////////////////////
-//264p 
+```c
+#include <stdio.h>
+
+int main(void)
+{
+  int n;
+  
+  printf("정수 입력: ");
+  scanf("%d", &n);
+  
+  if(n % 3)
+  {
+    printf("입력된 %d는 3의 배수가 아닙니다.\n", n);
+  }
+  else 
+  {
+    printf("입력된 %d는 3의 배수입니다.\n", n, n % 3);
+  }
+  printf("조건식 %d %% 3의 결과는 %d입니다.\n", n, n % 3);
+  return 0;
+}
+
+}
+```
+
+## //264p < double -> %lf / && -> 둘다만족
+```c
+#include <stdio.h>
+
+int main(void)
+{
+  double gpa;
+  
+  printf("평균평점 입력: ");
+  scanf("%lf", &gpa);
+  
+  if (gpa >= 4.3)
+    printf("성적이 최고 우수한 학생입니다.\n");
+  else if(gpa >= 3.8)
+    printf("성적이 매우 우수한 학생입니다.\n");
+  else if(gpa >= 3.0)
+    printf("성적이 우수한 학생입니다.\n");
+  else
+    printf("성적이 3.0 미만인 학생입니다.\n");
+    
+  return 0;
+}
+```
 
 ## tworeal.c 266p
 
@@ -180,7 +227,7 @@ int main(void)
 }
 ```
 
-### 268P
+## lab 268P
 
 ```c
 #include <stdio.h>
@@ -219,7 +266,7 @@ int main(void)
 }
 ```
 
-### *siomplemaxof3.c* 283p (switch case)
+## lab *siomplemaxof3.c* 283p (switch case)
 ```c
 #include <stdio.h>
 
@@ -242,7 +289,7 @@ int main(void)
   return 0;
 }
 ```
-### 289p enum <- 열거형상수(switch 조건보기편하게)
+## ** lab 289p enum <- 열거형상수(switch 조건보기편하게) (enum 155p)
 ```c
 #include <stdio.h>
 
@@ -272,19 +319,19 @@ int main(void)
   return 0;
 }
 ```
-과제 291p 3, 8, 9
+//과제 291p 3, 8, 9
 
 //조건문완료
 # 반복문
 
-### 1-100까지의 합
+## 1-100까지의 합
 ```c
 #include <stdio.h>
 
 int main(void)
 {
   int i, sum;
-  i = 0;
+  i = 1;
   
   while(i<=10)
   {
@@ -294,7 +341,7 @@ int main(void)
   printf("%d", sum);
 }
 ```
-### 구구단
+## 구구단
 ```c
 #include <stdio.h>
 
@@ -312,7 +359,7 @@ int main(void)
   }
 }
 ```
-### 309p do while <- 메뉴보여줄경우
+### 309p do while <- 메뉴보여줄경우(입력 후에 검사를 진행하는 처리 과정으로 do while 문으로 구현이 적합)
 
 ```c
 #include <stdio.h>
@@ -350,7 +397,9 @@ int main(void)
   printf("%d", sum);
 }
 ```
-### 331-332p
+## 322
+
+## 331-332p
 ```c
 #include <stdio.h>
 
