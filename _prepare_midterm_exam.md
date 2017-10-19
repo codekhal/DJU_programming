@@ -2,7 +2,7 @@ printf -> float double %f %f
 
 scanf -> float dobule %f %lf
 
-* = 주소에 있는 값
+// * = 주소에 있는 값
 
 & = 변수의 조수값
 
