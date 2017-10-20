@@ -1,3 +1,9 @@
+콤마연산자check
+
+for(i = 1, sum =0; i<= 10; sum+= i++);//****
+
+소수점뒤에F쓰면4byte그냥은8byte
+
 printf -> float double %f %f
 
 scanf -> float dobule %f %lf
@@ -206,7 +212,7 @@ int main(void)
   printf("정수 입력: ");
   scanf("%d", &n);
   
-  if (n % 2)
+  if (n % 2) // if(n % 2 != 0)
     printf("홀수");
   else
     printf("짝수");
@@ -232,7 +238,7 @@ int main(void)
   printf("정수 입력: ");
   scanf("%d", &n);
   
-  if(n % 3)
+  if(n % 3) // if(n % 3 != 0)
   {
     printf("입력된 %d는 3의 배수가 아닙니다.\n", n);
   }
@@ -452,7 +458,7 @@ int main(void)
 }
 ```
 
-## 316p
+## 316p - factorial
 ```c
 #include <stdio.h>
 
