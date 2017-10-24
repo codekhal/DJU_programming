@@ -15,35 +15,39 @@ There are many ways that advertisers hope to make their products become popular:
 
 ### Grammer: Present continuous
 
-> Use the present continuous to talk about activities in progress at the time of writing or that have started but not finished
+Use the present continuous to talk about activities in progress at the time of writing or that have started but not finished
 
-Ramon is talking on the phone. He's finding out the arrival time. (activities in progress)
-We are learning about how ideas spread. (action started but not finished)
-The new trend is contributing to higher costs. (change in progress)
+> Ramon is talking on the phone. He's finding out the arrival time. (activities in progress)
 
-> Use the present continuous with words like today, this week, or time periods around the present.
+> We are learning about how ideas spread. (action started but not finished)
 
-This week I am studying for exams.
-These days, more guests are reusing their towels in hotels.
+> The new trend is contributing to higher costs. (change in progress)
 
-> To form the present continous, use the verb to be and then the -ing form of the main verb.
+Use the present continuous with words like today, this week, or time periods around the present.
 
-> If the verb ends in e, delete the e and add -ing.
+> This week I am studying for exams.
 
-use -> using 
+> These days, more guests are reusing their towels in hotels.
 
-chnage -> changing 
+To form the present continous, use the verb to be and then the -ing form of the main verb.
 
-lose -> losing
+If the verb ends in e, delete the e and add -ing.
 
-> Use the present continuous to talk about changes. For example, changing, becoming, growing, increasing.
+> use -> using 
 
-TV ads are becoming like short movies.
-The Internet is changing the way companies advertise.
+> change -> changing 
 
-> Some verbs are not used with the present continuous. For example, know, want, need, understand, like, love, believe, see, hear.
+> lose -> losing
 
-I want to go with you, but I'm studying right now.
+Use the present continuous to talk about changes. For example, changing, becoming, growing, increasing.
+
+> TV ads are becoming like short movies.
+
+> The Internet is changing the way companies advertise.
+
+Some verbs are not used with the present continuous. For example, know, want, need, understand, like, love, believe, see, hear.
+
+> I want to go with you, but I'm studying right now.
 
 
 ## <02> How do colors affect the way we feel?
@@ -51,54 +55,64 @@ I want to go with you, but I'm studying right now.
 How Colors Make Us Think and Feel
 
 What does the color pink make you think of?
+
 How does the color blue make you feel?
+
 Why do hospital doctores wear white coats?
+
 What color room makes you feel relaxed?
 
 Colors affect everyone
+
 Each person may have a different answer to these questions, but we can agree that colors affect everyone. We think carefully about color when we choose our clothes or select paint for a room. But we are often unaware of how color affects us. For example, the color of a room may affect our emotions. Advertisers use color to influence our choices at the supermarket. In addition, we may not realize that colors have many different meanings.
 
 Universal meaning
+
 Colors in nature have universal meaning. For example, trees and plants are green, so the color green often represents life and nature. Blue, the color of the sky, oceans, and lakes, makes us think of air, water, and peace. Colors in the red spectrum - yellow, orange, and red - are warm colors. Those colors may give us a feeling of warmth and comfort or feelings of anger. Colors in the blue spectrum - colors such as blue, green, and purple - are cool colors. They often give a feeling of calmness or sadness. These ideas about color are similar around the world.
 
 Colors in health
+
 Humans have know about the power of color for a long time. Ancient cultures in China, Egypt, and India used colors to heal sicknesses. People believed that each color had a healing power. For example, people used blue to decrease pain. Even today, some people say that colors can help people feel better. However, research shows that although colors may change the way a person feels, they cannot heal an illness.
 
 Cultural meaning
+
 Colors also have different meanings in different cultures. A color may represent good feelings in one culture but had feelings in another. For example, in the United States white represents goodness. It is usually the color of a bride's wedding dress. However, in India, China, and Japan white can mean death. Green is the color of dollar bills in th U.S., so green may make Americans think of money But in China, green can represent a loss of respect. Different colors sometimes represent the same idea in different cultures. In European cultures, purple is the color of royalty for kings and queens. In Asia. yellow is the color of royalty. In addition one color will have many different meanings within one cultures.
 
 Color psychology
+
 Color psychology is the study of how colors affect our emotions. Researchers are finding that colors can change our behavior in specific ways. For example, one research study showed that people could lift heavy weights more easily in blue rooms. Other studies have looked at how colors influence decisions. Soccer referees gave competitors in blue clothing higher scores than competitors in red. In another study, students who saw the color red before a test did much more poorly. Of course, these test results might vary from culture to culture.
 
 Most people do not realize how much color affects them. It can affect how people think, feel, and act. Some colors, such as those in nature, can have the same meaning for everyone. Other colors' meanings may be different in different cultures. We can increase our understanding of ourselves and the world around us by learning about what colors can mean or represent.
 
 ### Grammer: Future with will
 
-> In academic writing, use the future with 'will' for predictions about the future and to express what experts predict.
+In academic writing, use the future with 'will' for predictions about the future and to express what experts predict.
 
-The designer will establish a second office in a new location
-There will be a survey asking about the best color for the new library.
+> The designer will establish a second office in a new location
 
-> Note: You can soften a prediction by using 'probably'. You can also use may instead of the future with 'will'.
+> There will be a survey asking about the best color for the new library.
 
-The designer will probably establish a second office in a new location.
-Ther designer may establish a second office in a new location.
+Note: You can soften a prediction by using 'probably'. You can also use may instead of the future with 'will'.
 
-> Use the future with 'will' to make a promise
+> The designer will probably establish a second office in a new location.
 
-I will help you in about an hour.
+> Ther designer may establish a second office in a new location.
 
-> Use the future with 'will' to express plans in more formal writing.
+Use the future with 'will' to make a promise
 
-Next month we will decide on new colors ofr the kitchen.
+> I will help you in about an hour.
 
-> Use the future with 'will' to express a decision made at the moment of writing.
+Use the future with 'will' to express plans in more formal writing.
 
-I'll go the meeting with you.
+> Next month we will decide on new colors ofr the kitchen.
 
-> Note: Use the future with 'be going to' to express a decision or plans that you made previously. This form is more common in informal speaking and writing.
+Use the future with 'will' to express a decision made at the moment of writing.
 
-I am going to have dinner with my cousin
+> I'll go the meeting with you.
+
+Note: Use the future with 'be going to' to express a decision or plans that you made previously. This form is more common in informal speaking and writing.
+
+> I am going to have dinner with my cousin
 
 
 ## <03> What does it mean to be polite?
@@ -122,27 +136,27 @@ If you are going to live, work, or study in another country, it is importiant to
 
 ### Grammar: Subject-verb agreement
 
-> It is important to make sure that the subject and verb in a sentence agree. Use the singular form of the verb with singular subjects.
+It is important to make sure that the subject and verb in a sentence agree. Use the singular form of the verb with singular subjects.
 
-My aunt always speaks in a very loud voice.
+> My aunt always speaks in a very loud voice.
 
-The cake is delicious.
+> The cake is delicious.
 
-> Use the plural form of the verb with plural subjects.
+Use the plural form of the verb with plural subjects.
 
-Articles about business etiquette are very useful.
+> Articles about business etiquette are very useful.
 
-My cats eat twice a day.
+> My cats eat twice a day.
 
-> With there is / ther are, the subject comes after the verb.
+With there is / ther are, the subject comes after the verb.
 
-There is a lot of information on the Internet about manners.
+> There is a lot of information on the Internet about manners.
 
-There are fifteen students in my class.
+> There are fifteen students in my class.
 
-> Remember that some plural nouns do not end in -s. For example, people, children, police.
+Remember that some plural nouns do not end in -s. For example, people, children, police.
 
-Children learn manners from their parents.
+> Children learn manners from their parents.
 
 
 ## <04> What makes a competition unfair?
@@ -165,18 +179,18 @@ Sports fans love close competitions between athletes, but everyone wants teams t
 
 Grammar: Modals(조동사)
 
-> One way to give your opinion is to use the modals should, should (not)
+One way to give your opinion is to use the modals should, should (not)
 
-Professional athletes should have lower salaries.
+> Professional athletes should have lower salaries.
 
-Coaches ought to follow the rules.
+> Coaches ought to follow the rules.
 
-I believe that disabled athletes should not compete against able-bodied athletes.
+> I believe that disabled athletes should not compete against able-bodied athletes.
 
-> Note that ought not is rarely used.
+Note that ought not is rarely used.
 
-> To make a very strong statement of your opinion, you can use must and must not.
+To make a very strong statement of your opinion, you can use must and must not.
 
-Officials must allow disabled athletes to participate in the Olympic Games.
+> Officials must allow disabled athletes to participate in the Olympic Games.
 
-We mus not let sprots be unfair in our schools.
+> We mus not let sprots be unfair in our schools.
