@@ -1,11 +1,13 @@
-# What is this repository
+# My aim of making this repository
 
-This repository is based on class of DJU lecture
+This repository is based on class of DJU lecture.
 
-I'll write down what I learned and do some assignment
+I'll write down what I learned and do some assignment.
 
-I just wanna be a great programmer and great artist
+I just wanna be a good programmer and good artist.
 
-This is the first step of make my dream
+This is the first step to my dream.
 
-If you find some grammanal fault about my sentence please correct me!
+Whosoever is interested can come and put his assignments,issues and solution to those of mine.
+
+If you find any grammatical fault in my sentence please correct me!
